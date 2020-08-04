@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v0.0.0](../README.md) › [Globals](../globals.md) › [BadRequestError](badrequesterror.md)
+[@goodwaygroup/lib-tradedesk - v0.0.0](../README.md) › [BadRequestError](badrequesterror.md)
 
 # Class: BadRequestError
 
@@ -28,7 +28,7 @@
 
 \+ **new BadRequestError**(`message`: string, `response`: Response): *[BadRequestError](badrequesterror.md)*
 
-*Defined in [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L20)*
+*Defined in [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/3309eed/src/errors.ts#L20)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/errors.ts:18](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L18)*
+*Defined in [src/errors.ts:18](https://github.com/GoodwayGroup/lib-tradedesk/blob/3309eed/src/errors.ts#L18)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-*Defined in [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L20)*
+*Defined in [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/3309eed/src/errors.ts#L20)*
 
 ___
 

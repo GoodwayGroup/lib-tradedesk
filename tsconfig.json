@@ -14,9 +14,10 @@
     ],
     "typedocOptions": {
         "mode": "file",
-        "out": "docs",
+        "out": "docs/api",
         "exclude": "src/**/*.spec.ts",
         "includeVersion": true,
-        "stripInternal": true
+        "stripInternal": true,
+        "readme": "none"
     }
 }
