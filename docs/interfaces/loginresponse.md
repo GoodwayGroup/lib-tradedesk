@@ -18,4 +18,4 @@
 
 • **Token**: *string*
 
-*Defined in [src/responses.ts:2](https://github.com/GoodwayGroup/lib-tradedesk/blob/5ac73ad/src/responses.ts#L2)*
+*Defined in [src/responses.ts:2](https://github.com/GoodwayGroup/lib-tradedesk/blob/270f1e7/src/responses.ts#L2)*

@@ -15,7 +15,7 @@
 
 • **production**: = "production"
 
-*Defined in [src/tradedesk.ts:9](https://github.com/GoodwayGroup/lib-tradedesk/blob/5ac73ad/src/tradedesk.ts#L9)*
+*Defined in [src/tradedesk.ts:9](https://github.com/GoodwayGroup/lib-tradedesk/blob/270f1e7/src/tradedesk.ts#L9)*
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • **sandbox**: = "sandbox"
 
-*Defined in [src/tradedesk.ts:10](https://github.com/GoodwayGroup/lib-tradedesk/blob/5ac73ad/src/tradedesk.ts#L10)*
+*Defined in [src/tradedesk.ts:10](https://github.com/GoodwayGroup/lib-tradedesk/blob/270f1e7/src/tradedesk.ts#L10)*

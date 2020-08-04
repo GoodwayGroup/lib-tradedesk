@@ -28,7 +28,7 @@
 
 \+ **new GoneError**(`message`: string, `response`: Response): *[GoneError](goneerror.md)*
 
-*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/5ac73ad/src/errors.ts#L42)*
+*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/270f1e7/src/errors.ts#L42)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/5ac73ad/src/errors.ts#L40)*
+*Defined in [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/270f1e7/src/errors.ts#L40)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/5ac73ad/src/errors.ts#L42)*
+*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/270f1e7/src/errors.ts#L42)*
 
 ___
 

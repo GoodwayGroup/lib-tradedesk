@@ -18,6 +18,8 @@ View the API's documentation at https://apis.thetradedesk.com/v3/doc
 $ npm install -S @goodwaygroup/lib-tradedesk
 ```
 
+---
+
 ```js
 const { TradeDesk } = require('@goodwaygroup/lib-tradedesk');
 
@@ -51,30 +53,7 @@ try {
 
 ## Configuration Options
 
-> When passing a configuration option, it will overwrite the defaults.
-
-- `traceUUIDHeader`: defaults to `x-gg-trace-uuid`. The header that is used for the Trace ID
-- `traceDepthHeader`: defaults to `x-gg-trace-depth`. The header that is used for the Depth ID
-- `enableStatsRoute`: defaults to `false`. Publish a route to `/good-tracer/stats` that exposes the current metrics for [`node-cache` statistics](https://github.com/node-cache/node-cache#statistics-stats).
-- `baseRoute`: defaults to `''`. Prepends to the `/good-tracer/stats` route.
-    - Example: `baseRoute = /serivce-awesome` results in `/serivce-awesome/good-tracer/stats`
-- `postResponseCleanup: (Boolean | Object)`: defaults to `true`. If set to anything, the feature is enabled. 
-    - `delay: Number`: defaults to `1` second. The amount of time to wait after reponse to delete a key from the cache. You can pass decimal values for sub-second times.
-- `axios`: Configured axios instances provided to each request
-    - `[key: string]: (Boolean | Object)`: if given, defaults to `{}`. Pass in any valid `axios` config options.
-- `cache`: internal memory cache settings. See [node-cache configuration](https://github.com/node-cache/node-cache#options)
-    - `stdTTL`: default `3600` seconds (1 hour)
-    - `checkperiod`: default `60` seconds
-    - `maxKeys`: default `-1` (no limit)
-    - `useClones`: default `false`
-    - `extendTTLOnGet`: This feature will reset the TTL to the global TTL when a successful `get` occurs. This will extend the life of an item in the cache as a result. default `true`
-
-## Route Configuration Options
-
-> Route level plugin configuration overwrites the options passed to the plugin.
-
-- `axios`: Configured axios instances provided to each request
-    - `[key: string]: (Boolean | Object)`: if given, defaults to `{}`. Pass in any valid `axios` config options.
+> See [Documentation](../docs/globals.md)
 
 ## Running Tests
 
@@ -116,7 +95,7 @@ npm version minor
 
 ## Authors
 
-* **Derek Smith** - *Initial work* - [@clok](https://github.com/clok)
+* **Julian Lannigan** - *Initial work* - [@mrlannigan](https://github.com/mrlannigan)
 
 See also the list of [contributors](https://github.com/GoodwayGroup/lib-tradedesk/contributors) who participated in this project.
 
