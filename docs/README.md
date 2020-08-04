@@ -53,7 +53,7 @@ try {
 
 ## Configuration Options
 
-> See [Documentation](../docs/globals.md)
+> See [Documentation](../docs/interfaces/tradedeskoptions.md)
 
 ## Running Tests
 
