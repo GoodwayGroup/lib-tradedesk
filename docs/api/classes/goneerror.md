@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v0.0.0](../README.md) › [Globals](../globals.md) › [GoneError](goneerror.md)
+[@goodwaygroup/lib-tradedesk - v0.0.0](../README.md) › [GoneError](goneerror.md)
 
 # Class: GoneError
 
@@ -28,7 +28,7 @@
 
 \+ **new GoneError**(`message`: string, `response`: Response): *[GoneError](goneerror.md)*
 
-*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L42)*
+*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/46687fa/src/errors.ts#L42)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L40)*
+*Defined in [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/46687fa/src/errors.ts#L40)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L42)*
+*Defined in [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/46687fa/src/errors.ts#L42)*
 
 ___
 

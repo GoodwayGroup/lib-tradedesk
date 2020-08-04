@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v0.0.0](../README.md) › [Globals](../globals.md) › [ForbiddenError](forbiddenerror.md)
+[@goodwaygroup/lib-tradedesk - v0.0.0](../README.md) › [ForbiddenError](forbiddenerror.md)
 
 # Class: ForbiddenError
 
@@ -28,7 +28,7 @@
 
 \+ **new ForbiddenError**(`message`: string, `response`: Response): *[ForbiddenError](forbiddenerror.md)*
 
-*Defined in [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L31)*
+*Defined in [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/46687fa/src/errors.ts#L31)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/errors.ts:29](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L29)*
+*Defined in [src/errors.ts:29](https://github.com/GoodwayGroup/lib-tradedesk/blob/46687fa/src/errors.ts#L29)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-*Defined in [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L31)*
+*Defined in [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/46687fa/src/errors.ts#L31)*
 
 ___
 

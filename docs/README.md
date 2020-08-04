@@ -1,7 +1,3 @@
-[@goodwaygroup/lib-tradedesk - v0.0.0](README.md) › [Globals](globals.md)
-
-# @goodwaygroup/lib-tradedesk - v0.0.0
-
 # lib-tradedesk
 
 [![Coverage Status](https://coveralls.io/repos/github/GoodwayGroup/lib-tradedesk/badge.svg?branch=master)](https://coveralls.io/github/GoodwayGroup/lib-tradedesk?branch=master) [![CircleCI](https://circleci.com/gh/GoodwayGroup/lib-tradedesk.svg?style=svg)](https://circleci.com/gh/GoodwayGroup/lib-tradedesk)
@@ -51,9 +47,14 @@ try {
 }
 ```
 
+
 ## Configuration Options
 
-> See [Documentation](./docs/interfaces/tradedeskoptions.md)
+> See [Documentation](./docs/api/interfaces/tradedeskoptions.md)
+
+## Full Documentation
+
+> See [Documentation](./docs/api/README.md)
 
 ## Running Tests
 

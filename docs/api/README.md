@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v0.0.0](README.md) › [Globals](globals.md)
+[@goodwaygroup/lib-tradedesk - v0.0.0](README.md)
 
 # @goodwaygroup/lib-tradedesk - v0.0.0
 

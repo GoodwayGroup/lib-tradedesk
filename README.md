@@ -50,8 +50,11 @@ try {
 
 ## Configuration Options
 
-> See [Documentation](./docs/interfaces/tradedeskoptions.md)
+> See [Documentation](./docs/api/interfaces/tradedeskoptions.md)
 
+## Full Documentation
+
+> See [Documentation](./docs/api/README.md)
 
 ## Running Tests
 
