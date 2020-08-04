@@ -3,3 +3,4 @@ coverage/
 scripts/
 wallaby.js
 dist/
+docs/
