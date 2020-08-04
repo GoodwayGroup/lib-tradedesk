@@ -80,7 +80,13 @@ class TradeDesk {
 
     setToken(token: string): TradeDesk {
         this.token = token;
-        this.tokenTime = Date.now();
+
+        let expiration = 86.4e6 * 365; // one year
+        if (this.options.tokenExpiration) {
+            expiration = this.options.tokenExpiration * 60 * 1000;
+        }
+
+        this.tokenTime = Date.now() + expiration;
 
         return this;
     }

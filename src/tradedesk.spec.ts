@@ -31,14 +31,32 @@ describe('TradeDesk Class', () => {
         });
     });
 
-    it('should set a token', () => {
+    it('should set a token with no given expiration', () => {
         const instance = new TradeDesk();
 
         const returnedInstance = instance.setToken('atoken');
 
         expect(returnedInstance).toBe(instance);
         expect(instance.token).toEqual('atoken');
-        expect(instance.tokenTime / 1000).toBeCloseTo(Date.now() / 1000, 1);
+        expect(instance.tokenTime / 1000).toBeCloseTo(
+            (Date.now() + 86.4e6 * 365) / 1000,
+            1
+        );
+    });
+
+    it('should set a token with a given expiration', () => {
+        const instance = new TradeDesk({
+            tokenExpiration: 60
+        });
+
+        const returnedInstance = instance.setToken('atoken');
+
+        expect(returnedInstance).toBe(instance);
+        expect(instance.token).toEqual('atoken');
+        expect(instance.tokenTime / 1000).toBeCloseTo(
+            (Date.now() + (60 * 60 * 1000)) / 1000,
+            1
+        );
     });
 
     it.each([
