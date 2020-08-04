@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@goodwaygroup/lib-tradedesk - v0.0.0</title>
+	<meta name="description" content="Documentation for @goodwaygroup/lib-tradedesk - v0.0.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@goodwaygroup/lib-tradedesk - v0.0.0</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@goodwaygroup/lib-tradedesk - v0.0.0</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#lib-tradedesk" id="lib-tradedesk" style="color: inherit; text-decoration: none;">
+					<h1>lib-tradedesk</h1>
+				</a>
+				<p><a href="https://coveralls.io/github/GoodwayGroup/lib-tradedesk?branch=master"><img src="https://coveralls.io/repos/github/GoodwayGroup/lib-tradedesk/badge.svg?branch=master" alt="Coverage Status"></a> <a href="https://circleci.com/gh/GoodwayGroup/lib-tradedesk"><img src="https://circleci.com/gh/GoodwayGroup/lib-tradedesk.svg?style=svg" alt="CircleCI"></a></p>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>This plugin will interact with The Trade Desk&#39;s API. </p>
+				<p>View the API&#39;s documentation at <a href="https://apis.thetradedesk.com/v3/doc">https://apis.thetradedesk.com/v3/doc</a></p>
+				<blockquote>
+					<p>NOTE: This module uses the <a href="https://www.npmjs.com/package/debug"><code>debug</code></a> logging tool. Use <code>DEBUG=tradedesk*</code> to view debug logging.</p>
+				</blockquote>
+				<pre><code>$ npm install -S @goodwaygroup/<span class="hljs-class"><span class="hljs-keyword">lib</span>-<span class="hljs-title">tradedesk</span></span></code></pre><pre><code class="language-js"><span class="hljs-keyword">const</span> { TradeDesk } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@goodwaygroup/lib-tradedesk&#x27;</span>);
+
+<span class="hljs-keyword">const</span> ttd = <span class="hljs-keyword">new</span> TradeDesk({
+    <span class="hljs-attr">username</span>: <span class="hljs-string">&#x27;testuser@example.com&#x27;</span>,
+    <span class="hljs-attr">password</span>: <span class="hljs-string">&#x27;apasswordthatwontwork&#x27;</span>
+});
+
+<span class="hljs-comment">// Promises</span>
+ttd.get(<span class="hljs-string">&#x27;/campaign/query/facets&#x27;</span>)
+    .then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> res.json())
+    .then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(body))
+    .catch(<span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(err.stack);
+        <span class="hljs-keyword">if</span> (err.response) {
+            <span class="hljs-keyword">return</span> err.response.json().then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(body))
+        }
+    });
+
+<span class="hljs-comment">// Async/Await</span>
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> ttd.get(<span class="hljs-string">&#x27;/campaign/query/facets&#x27;</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> res.json());
+} <span class="hljs-keyword">catch</span> (err) {
+    <span class="hljs-built_in">console</span>.log(err.stack);
+    <span class="hljs-keyword">if</span> (err.response) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> err.response.json())
+    }
+}</code></pre>
+				<a href="#configuration-options" id="configuration-options" style="color: inherit; text-decoration: none;">
+					<h2>Configuration Options</h2>
+				</a>
+				<blockquote>
+					<p>When passing a configuration option, it will overwrite the defaults.</p>
+				</blockquote>
+				<ul>
+					<li><code>traceUUIDHeader</code>: defaults to <code>x-gg-trace-uuid</code>. The header that is used for the Trace ID</li>
+					<li><code>traceDepthHeader</code>: defaults to <code>x-gg-trace-depth</code>. The header that is used for the Depth ID</li>
+					<li><code>enableStatsRoute</code>: defaults to <code>false</code>. Publish a route to <code>/good-tracer/stats</code> that exposes the current metrics for <a href="https://github.com/node-cache/node-cache#statistics-stats"><code>node-cache</code> statistics</a>.</li>
+					<li><code>baseRoute</code>: defaults to <code>&#39;&#39;</code>. Prepends to the <code>/good-tracer/stats</code> route.<ul>
+							<li>Example: <code>baseRoute = /serivce-awesome</code> results in <code>/serivce-awesome/good-tracer/stats</code></li>
+						</ul>
+					</li>
+					<li><code>postResponseCleanup: (Boolean | Object)</code>: defaults to <code>true</code>. If set to anything, the feature is enabled. <ul>
+							<li><code>delay: Number</code>: defaults to <code>1</code> second. The amount of time to wait after reponse to delete a key from the cache. You can pass decimal values for sub-second times.</li>
+						</ul>
+					</li>
+					<li><code>axios</code>: Configured axios instances provided to each request<ul>
+							<li><code>[key: string]: (Boolean | Object)</code>: if given, defaults to <code>{}</code>. Pass in any valid <code>axios</code> config options.</li>
+						</ul>
+					</li>
+					<li><code>cache</code>: internal memory cache settings. See <a href="https://github.com/node-cache/node-cache#options">node-cache configuration</a><ul>
+							<li><code>stdTTL</code>: default <code>3600</code> seconds (1 hour)</li>
+							<li><code>checkperiod</code>: default <code>60</code> seconds</li>
+							<li><code>maxKeys</code>: default <code>-1</code> (no limit)</li>
+							<li><code>useClones</code>: default <code>false</code></li>
+							<li><code>extendTTLOnGet</code>: This feature will reset the TTL to the global TTL when a successful <code>get</code> occurs. This will extend the life of an item in the cache as a result. default <code>true</code></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#route-configuration-options" id="route-configuration-options" style="color: inherit; text-decoration: none;">
+					<h2>Route Configuration Options</h2>
+				</a>
+				<blockquote>
+					<p>Route level plugin configuration overwrites the options passed to the plugin.</p>
+				</blockquote>
+				<ul>
+					<li><code>axios</code>: Configured axios instances provided to each request<ul>
+							<li><code>[key: string]: (Boolean | Object)</code>: if given, defaults to <code>{}</code>. Pass in any valid <code>axios</code> config options.</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
+					<h2>Running Tests</h2>
+				</a>
+				<p>To run tests, just run the following:</p>
+				<pre><code>npm <span class="hljs-built_in">test</span></code></pre><p>All commits are tested on <a href="https://circleci.com/gh/GoodwayGroup/workflows/lib-tradedesk">CircleCI</a></p>
+				<a href="#linting" id="linting" style="color: inherit; text-decoration: none;">
+					<h2>Linting</h2>
+				</a>
+				<p>To run <code>eslint</code>:</p>
+				<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> lint</span></code></pre><p>To auto-resolve:</p>
+				<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> lint:fix</span></code></pre>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
+				<a href="#versioning" id="versioning" style="color: inherit; text-decoration: none;">
+					<h2>Versioning</h2>
+				</a>
+				<p>We use milestones and <code>npm</code> version to bump versions. We also employ <a href="https://github.com/git-chglog/git-chglog">git-chglog</a> to manage the <a href="CHANGELOG.md">CHANGELOG.md</a>. For the versions available, see the <a href="https://github.com/GoodwayGroup/lib-tradedesk/tags">tags on this repository</a>.</p>
+				<p>To initiate a version change:</p>
+				<pre><code>npm <span class="hljs-built_in">version</span> minor</code></pre>
+				<a href="#authors" id="authors" style="color: inherit; text-decoration: none;">
+					<h2>Authors</h2>
+				</a>
+				<ul>
+					<li><strong>Derek Smith</strong> - <em>Initial work</em> - <a href="https://github.com/clok">@clok</a></li>
+				</ul>
+				<p>See also the list of <a href="https://github.com/GoodwayGroup/lib-tradedesk/contributors">contributors</a> who participated in this project.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details</p>
+				<a href="#acknowledgments" id="acknowledgments" style="color: inherit; text-decoration: none;">
+					<h2>Acknowledgments</h2>
+				</a>
+				<a href="#sponsors" id="sponsors" style="color: inherit; text-decoration: none;">
+					<h2>Sponsors</h2>
+				</a>
+				<p><a href="https://goodwaygroup.com"><img src="https://s3.amazonaws.com/gw-crs-assets/goodwaygroup/logos/ggLogo_sm.png" alt="goodwaygroup" title="Goodway Group"></a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/apiurlenvironments.html" class="tsd-kind-icon">Api<wbr>Url<wbr>Environments</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/badrequesterror.html" class="tsd-kind-icon">Bad<wbr>Request<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/forbiddenerror.html" class="tsd-kind-icon">Forbidden<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/goneerror.html" class="tsd-kind-icon">Gone<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/internalservererror.html" class="tsd-kind-icon">Internal<wbr>Server<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/ratelimiterror.html" class="tsd-kind-icon">Rate<wbr>Limit<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/tradedesk.html" class="tsd-kind-icon">Trade<wbr>Desk</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unauthorizederror.html" class="tsd-kind-icon">Unauthorized<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/loginresponse.html" class="tsd-kind-icon">Login<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/tradedeskoptions.html" class="tsd-kind-icon">Trade<wbr>Desk<wbr>Options</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
