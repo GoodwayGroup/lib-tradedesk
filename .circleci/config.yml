@@ -1,0 +1,55 @@
+version: 2.1
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    -
+      image: circleci/node:12
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      -
+        restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+
+      -
+        run:
+          name: Dependency Install
+          command: npm install
+
+      -
+        save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+
+      # Run Tests!
+      - run: npm test
+
+      # Upload to CodeCov
+      # - run:
+      #     name: 'Upload to codecov.io'
+      #     command: bash <(curl -s https://codecov.io/bash) -t <>
+
+      - coveralls/upload
+
+      - store_artifacts:
+          path: ./coverage
+
+workflows:
+  version: 2
+  build_workflow:
+    jobs:
+      -
+        test:
+          filters:
+            tags:
+              only: /.*/

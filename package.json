@@ -1,0 +1,90 @@
+{
+  "name": "@goodwaygroup/lib-tradedesk",
+  "version": "0.0.0",
+  "description": "Interact with Tradedesk's API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --coverage",
+    "prepare": "npm run build",
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "changelog": "git-chglog -o CHANGELOG.md --next-tag $(grep '\\\"version\\\":' package.json | grep -v git-chglog | awk -F '\\\"' '{print $4}')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodwayGroup/lib-tradedesk.git"
+  },
+  "keywords": [
+    "tradedesk",
+    "stream",
+    "api"
+  ],
+  "author": "https://github.com/mrlannigan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GoodwayGroup/lib-tradedesk/issues"
+  },
+  "homepage": "https://github.com/GoodwayGroup/lib-tradedesk#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.8",
+    "@types/node-fetch": "^2.5.7",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint": "^7.6.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "nock": "^13.0.3",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint && npm test"
+    }
+  },
+  "jest": {
+    "clearMocks": true,
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "text-summary",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,js,jsx,mjs}"
+    ],
+    "setupFiles": [],
+    "testMatch": [
+      "<rootDir>/src/**/*.spec.ts"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {},
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "web.js",
+      "mjs",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
