@@ -1,5 +1,8 @@
 import { Response } from 'node-fetch';
 
+/**
+ * @category Error
+ */
 export class RateLimitError extends Error {
     name = 'RateLimitError';
 
@@ -14,6 +17,9 @@ export class RateLimitError extends Error {
     }
 }
 
+/**
+ * @category Error
+ */
 export class BadRequestError extends Error {
     name = 'BadRequestError';
 
@@ -25,6 +31,9 @@ export class BadRequestError extends Error {
     }
 }
 
+/**
+ * @category Error
+ */
 export class ForbiddenError extends Error {
     name = 'ForbiddenError';
 
@@ -36,6 +45,9 @@ export class ForbiddenError extends Error {
     }
 }
 
+/**
+ * @category Error
+ */
 export class GoneError extends Error {
     name = 'GoneError';
 
@@ -47,6 +59,9 @@ export class GoneError extends Error {
     }
 }
 
+/**
+ * @category Error
+ */
 export class UnauthorizedError extends Error {
     name = 'UnauthorizedError';
 
@@ -58,6 +73,9 @@ export class UnauthorizedError extends Error {
     }
 }
 
+/**
+ * @category Error
+ */
 export class InternalServerError extends Error {
     name = 'InternalServerError';
 
@@ -67,8 +85,4 @@ export class InternalServerError extends Error {
         super(message);
         this.response = response;
     }
-}
-
-export class NoTokenError extends Error {
-    name = 'NoTokenError';
 }

@@ -1,11 +1,9 @@
 import * as http from 'http';
-import * as https from 'https';
-import fetch, { RequestInit, Response, HeadersInit, RequestInfo } from 'node-fetch';
+import fetch, { RequestInit, Response, HeadersInit } from 'node-fetch';
 import { RateLimitError, BadRequestError, GoneError, UnauthorizedError, InternalServerError, ForbiddenError } from './errors';
 import { LoginResponse } from './responses';
 import delay from './delay';
 import { LoginRequestBody } from './requests';
-import { NoTokenError } from '.';
 
 export enum ApiUrlEnvironments {
     production = 'production',
@@ -15,69 +13,41 @@ export enum ApiUrlEnvironments {
 interface TradeDeskOptions {
     /**
      * The url of the Tradedesk API
-     * 
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     apiUrl?: string;
 
     /**
      * HTTP(s) Agent to use when making requests
-     *
-     * `undefined` (default): use `http.globalAgent` for this host and port.
-     * `Agent` object: explicitly use the passed in `Agent`.
-     * `false`: causes a new `Agent` with default values to be used.
-     *
-     * @type {http.Agent | boolean}
-     * @memberof TradeDeskOptions
      */
-    agent?: http.Agent | https.Agent | boolean;
+    agent?: http.Agent | ((parsedUrl: URL) => http.Agent);
 
     /**
      * The login of the user requesting the authentication token.
-     * 
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     username?: string;
 
     /**
      * The login of the user requesting the authentication token.
-     * 
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     password?: string;
 
     /**
      * The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire
-     * 
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     tokenExpiration?: number;
 
     /**
      * Max number of retires to try a request when getting rate limited
-     *
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     maxRetries?: number
     
     /**
      * Max delay for an exponential back off policy for when retrying requests. Time is in seconds.
-     *
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     maxRetryDelay?: number
 
     /**
      * Base delay for an exponential back off policy for when retrying requests. Time is in seconds.
-     *
-     * @type {number}
-     * @memberof TradeDeskOptions
      */
     retryDelay?: number
 }
@@ -85,24 +55,16 @@ interface TradeDeskOptions {
 class TradeDesk {
     /**
      * The authentication token
-     *
-     * @memberof TradeDesk
      */
     public token = '';
 
     /**
      * The time when the token was last set. This works to refresh a token before trying request with an expired token
-     *
-     * @type {number}
-     * @memberof TradeDesk
      */
     public tokenTime: number;
 
     /**
      * Options used to make requests
-     *
-     * @type {TradeDeskOptions}
-     * @memberof TradeDesk
      */
     public options: TradeDeskOptions;
 
@@ -125,19 +87,11 @@ class TradeDesk {
 
     /**
      * Set the API url based on an enumerated list
-     *
-     * @param {ApiUrlEnvironments} environment
-     * @returns {TradeDesk}
-     * @memberof TradeDesk
      */
     setApiUrl(environment: ApiUrlEnvironments): TradeDesk;
 
     /**
      * Set the API Url to an explicit url
-     *
-     * @param {string} url
-     * @returns {TradeDesk}
-     * @memberof TradeDesk
      */
     setApiUrl(url: string): TradeDesk;
 
@@ -155,20 +109,15 @@ class TradeDesk {
 
     /**
      * Login to TradeDesk API and grab an authentication token
-     *
-     * @returns {Promise<TradeDesk>}
-     * @memberof TradeDesk
      */
     async login(): Promise<TradeDesk>;
 
     /**
      * Login to TradeDesk API and grab an authentication token
      *
-     * @param {string} username The login of the user requesting the authentication token.
-     * @param {string} password The login of the user requesting the authentication token.
-     * @param {number} [tokenExpiration=0] The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire
-     * @returns {Promise<TradeDesk>}
-     * @memberof TradeDesk
+     * @param username - The login of the user requesting the authentication token.
+     * @param password - The login of the user requesting the authentication token.
+     * @param tokenExpiration - The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire
      */
     async login(
         username: string,
@@ -222,11 +171,6 @@ class TradeDesk {
 
     /**
      * Make URL by combining the apiUrl and the given uri
-     *
-     * @private
-     * @param {string} uri
-     * @returns {string}
-     * @memberof TradeDesk
      */
     private makeUrl(uri: string): string {
         return `${this.options.apiUrl}${uri}`;
@@ -234,10 +178,6 @@ class TradeDesk {
 
     /**
      * Does this instance have enough data to attempt a login
-     *
-     * @private
-     * @returns {boolean}
-     * @memberof TradeDesk
      */
     private canLogin(): boolean {
         return Boolean(this.options.username && this.options.password);
@@ -245,14 +185,6 @@ class TradeDesk {
 
     /**
      * Make a http request with node-fetch with builtin retries and automatic login
-     *
-     * @private
-     * @param {string} uri
-     * @param {RequestInit} options
-     * @param {number} [attempts=0]
-     * @param {boolean} [tryLogin=true]
-     * @returns {Promise<Response>}
-     * @memberof TradeDesk
      */
     private async request(
         uri: string,
@@ -272,6 +204,7 @@ class TradeDesk {
 
         // Apply token header
         const mergedOptions: RequestInit = {
+            agent: this.options.agent,
             ...options,
             headers: {
                 ...(options.headers || ({} as HeadersInit)),
@@ -337,11 +270,6 @@ class TradeDesk {
 
     /**
      * Create a GET request
-     *
-     * @param {string} uri
-     * @param {RequestInit} [options={}]
-     * @returns {Promise<Response>}
-     * @memberof TradeDesk
      */
     get(
         uri: string,
@@ -355,12 +283,6 @@ class TradeDesk {
 
     /**
      * Create a POST request
-     *
-     * @param {string} uri
-     * @param {Record<string, unknown>} payload
-     * @param {RequestInit} [options={}]
-     * @returns {Promise<Response>}
-     * @memberof TradeDesk
      */
     post(
         uri: string,
@@ -380,12 +302,6 @@ class TradeDesk {
 
     /**
      * Create a PUT request
-     *
-     * @param {string} uri
-     * @param {Record<string, unknown>} payload
-     * @param {RequestInit} [options={}]
-     * @returns {Promise<Response>}
-     * @memberof TradeDesk
      */
     put(
         uri: string,
@@ -405,11 +321,6 @@ class TradeDesk {
 
     /**
      * Create a DELETE request
-     *
-     * @param {string} uri
-     * @param {RequestInit} [options={}]
-     * @returns {Promise<Response>}
-     * @memberof TradeDesk
      */
     delete(
         uri: string,

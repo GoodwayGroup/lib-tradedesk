@@ -5,8 +5,7 @@ import {
     ForbiddenError,
     GoneError,
     UnauthorizedError,
-    InternalServerError,
-    NoTokenError
+    InternalServerError
 } from './errors';
 import { Response } from 'node-fetch';
 
@@ -18,7 +17,7 @@ export {
     GoneError,
     UnauthorizedError,
     InternalServerError,
-    NoTokenError,
-    Response
+    Response,
+    TradeDesk
 };
 export default TradeDesk;

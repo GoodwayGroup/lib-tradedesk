@@ -4,153 +4,47 @@
 
 ## Usage
 
-This plugin will read, generate and track a tracer header on `request`s that is then injected into the `Good` log stream via an injected `tracer` object.
+This plugin will interact with The Trade Desk's API. 
 
-```json
-{
-  "tracer": {
-    "uuid": "STRING",
-    "depth": "INTEGER"
-  }
-}
-```
+View the API's documentation at https://apis.thetradedesk.com/v3/doc
 
-The `depth` value provides insight into the hierarchy chain of requests. Combining the `uuid` + `depth` + `timestamp` of a request will provide a mapping to the request chain.
-
-> NOTE: This module uses the [`debug`](https://www.npmjs.com/package/debug) logging tool. Use `DEBUG=hapi:plugins:good-tracer` to view debug logging.
+> NOTE: This module uses the [`debug`](https://www.npmjs.com/package/debug) logging tool. Use `DEBUG=tradedesk*` to view debug logging.
 
 ```
 $ npm install -S @goodwaygroup/lib-tradedesk
 ```
 
-In your `index.js` for the Hapi server, register the plugin:
-
 ```js
-await server.register({
-    plugin: require('@goodwaygroup/lib-tradedesk'),
-    options: {
-        traceUUIDHeader: 'x-custom-trace-uuid', // optional defaults to 'x-gg-trace-uuid'
-        traceDepthHeader: 'x-custom-trace-depth', // optional defaults to 'x-gg-trace-depth'
-        enableStatsRoute: true, // optional defaults to false
-        baseRoute: '/debug', // optional defaults to ''
-        cache: {
-            stdTTL: 60 // optional defaults to 3600 seconds
-        },
-        axios: {
-            main: { // defaults to {}
-                headers: {
-                    common: {
-                        'user-agent': 'service-yolo'
-                    }
-                }
-            }
-        }
-    }
+const { TradeDesk } = require('@goodwaygroup/lib-tradedesk');
+
+const ttd = new TradeDesk({
+    username: 'testuser@example.com',
+    password: 'apasswordthatwontwork'
 });
 
-// add stream to Good log reporters
-const logReporters = {
-    console: [
-        server.plugins.goodTracer.GoodSourceTracer, // Stream Transform that will inject the tracer object
-        {
-            module: 'good-squeeze',
-            name: 'Squeeze',
-            args: [{
-                response: { exclude: 'healthcheck' },
-                log: '*',
-                request: '*',
-                error: '*',
-                ops: '*'
-            }]
-        }, {
-            module: 'good-squeeze',
-            name: 'SafeJson'
-        }, 'stdout']
-};
-
-await server.register({
-    plugin: Good,
-    options: {
-        reporters: logReporters
-    }
-});
-```
-
-## axios Client Route Usage
-
-Passing `axios` plugin or route configuration will create Axios instances on the `request`. Use these instances to have the trace headers injected. This will allow for chained request tracing.
-
-```js
-await server.register({
-    plugin: require('@goodwaygroup/lib-tradedesk'),
-    options: {
-        axios: {
-            main: {}
+// Promises
+ttd.get('/campaign/query/facets')
+    .then((res) => res.json())
+    .then((body) => console.log(body))
+    .catch((err) => {
+        console.log(err.stack);
+        if (err.response) {
+            return err.response.json().then((body) => console.log(body))
         }
-    }
-});
+    });
 
-const routes = [{
-    method: 'GET',
-    path: '/proxy/google',
-    config: {
-        tags: ['proxy'],
-    },
-    handler: async (request) => {
-        const { axios } = request.plugins.goodTracer;
-        return axios.main.get('https://google.com')
+// Async/Await
+try {
+    const res = await ttd.get('/campaign/query/facets');
+    console.log(await res.json());
+} catch (err) {
+    console.log(err.stack);
+    if (err.response) {
+        console.log(await err.response.json())
     }
-}];
-
-exports.routes = server => server.route(routes);
+}
 ```
 
-And with Route level configuration
-
-```js
-const routes = [{
-    method: 'GET',
-    path: '/proxy/google',
-    config: {
-        tags: ['proxy'],
-        plugins: {
-            goodTracer: {
-                axios: {
-                    inroute: {}
-                }
-            }
-        }
-    },
-    handler: async (request) => {
-        const { axios } = request.plugins.goodTracer;
-        return axios.inroute.get('https://google.com')
-    }
-}];
-
-exports.routes = server => server.route(routes);
-```
-
-## Request Chain Hierarchy
-
-Consider The following request chain:
-
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcblx0QVtTZXJ2aWNlIEFdIC0tPiB8UmVxdWVzdCAxIGRlcHRoIDB8IEJbU2VydmljZSBCXVxuXHRCIC0tPiB8UmVxdWVzdCAxIGRlcHRoIDF8IENbU2VydmljZSBDXVxuICBCIC0tPiB8UmVxdWVzdCAyIGRlcHRoIDF8IENcbiAgQSAtLT4gfFJlcXVlc3QgMiBkZXB0aCAwfCBDIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcblx0QVtTZXJ2aWNlIEFdIC0tPiB8UmVxdWVzdCAxIGRlcHRoIDB8IEJbU2VydmljZSBCXVxuXHRCIC0tPiB8UmVxdWVzdCAxIGRlcHRoIDF8IENbU2VydmljZSBDXVxuICBCIC0tPiB8UmVxdWVzdCAyIGRlcHRoIDF8IENcbiAgQSAtLT4gfFJlcXVlc3QgMiBkZXB0aCAwfCBDIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
-
-The `depth` value provides insight into the hierarchy chain of requests. Combining the `uuid` + `depth` + `timestamp` of a request will provide a mapping to the request chain.
-
-## In-Memory Cache
-
-This plugin uses an in-memory cache that is used to pass the `tracer` information between the server, request and logger.
-
-There is a global TTL per object that is reset on each `get` of the object.
-
-If an object is stale for the length of the TTL, it will be culled.
-
-There is a max number of keys that can be active at any time to help with memory concerns.
-
-The `postResponseCleanup` option is on by default. This will delete the cached data associated with the request on a delay (default of `1000 ms`).  
-
-See [node-cache](https://github.com/node-cache/node-cache) for available settings.
 
 ## Configuration Options
 
