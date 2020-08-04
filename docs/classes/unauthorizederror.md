@@ -28,7 +28,7 @@
 
 \+ **new UnauthorizedError**(`message`: string, `response`: Response): *[UnauthorizedError](unauthorizederror.md)*
 
-*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/169b7f2/src/errors.ts#L53)*
+*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L53)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/169b7f2/src/errors.ts#L51)*
+*Defined in [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L51)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/169b7f2/src/errors.ts#L53)*
+*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/4d57b6d/src/errors.ts#L53)*
 
 ___
 

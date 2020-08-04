@@ -50,7 +50,7 @@ try {
 
 ## Configuration Options
 
-> See [Documentation](../docs/interfaces/tradedeskoptions.md)
+> See [Documentation](./docs/interfaces/tradedeskoptions.md)
 
 
 ## Running Tests
