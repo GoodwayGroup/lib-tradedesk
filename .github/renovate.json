@@ -11,12 +11,9 @@
         "after 8am every weekday"
     ],
     "major": {
-        "labels": ["major"]
+        "labels": ["dependencies", "major"]
     },
     "minor": {
-        "labels": ["minor"]
-    },
-    "patch": {
-        "labels": ["patch"]
+        "labels": ["dependencies", "minor"]
     }
 }
