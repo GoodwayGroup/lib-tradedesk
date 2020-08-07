@@ -1,0 +1,22 @@
+{
+    "semanticCommits": true,
+    "prHourlyLimit": 2,
+    "ignoreDeps": ["graphql"],
+    "labels": ["dependencies"],
+    "extends": [
+        "config:base"
+    ],
+    "schedule": [
+        "before 6pm every weekday",
+        "after 8am every weekday"
+    ],
+    "major": {
+        "labels": ["major"]
+    },
+    "minor": {
+        "labels": ["minor"]
+    },
+    "patch": {
+        "labels": ["patch"]
+    }
+}
