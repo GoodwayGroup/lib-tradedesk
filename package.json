@@ -37,7 +37,7 @@
     "eslint-plugin-jest": "23.20.0",
     "eslint-plugin-tsdoc": "0.2.6",
     "husky": "4.2.5",
-    "jest": "26.2.2",
+    "jest": "26.4.2",
     "nock": "13.0.3",
     "ts-jest": "26.1.4",
     "typedoc": "0.17.8",
