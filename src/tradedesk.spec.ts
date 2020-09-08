@@ -149,7 +149,7 @@ describe('TradeDesk Class', () => {
                 .reply(429, JSON.stringify('Try again'), {
                     'retry-after': '0.1',
                 });
-            
+
             const instance = new TradeDesk({
                 maxRetries: 0
             });
@@ -326,4 +326,70 @@ describe('TradeDesk Class', () => {
     });
 
     // it('should retry login if token has expired')
+
+    describe("passthrough requests", () => {
+        it('[get]', async () => {
+            const loginScope = nock('https://api.thetradedesk.com/v3')
+                .get('/advertiser')
+                .reply(200, { a: 'result' });
+
+            const instance = new TradeDesk();
+            instance.setToken('atoken');
+
+            const result = await instance.get('/advertiser');
+
+            expect(result.status).toBe(200)
+            expect(await result.json()).toEqual({ a: 'result' })
+
+            expect(loginScope.isDone()).toBe(true);
+        });
+
+        it('[post]', async () => {
+            const loginScope = nock('https://api.thetradedesk.com/v3')
+                .post('/advertiser', { a: 'request' })
+                .reply(200, { a: 'result' });
+
+            const instance = new TradeDesk();
+            instance.setToken('atoken');
+
+            const result = await instance.post('/advertiser', { a: 'request' });
+
+            expect(result.status).toBe(200)
+            expect(await result.json()).toEqual({ a: 'result' })
+
+            expect(loginScope.isDone()).toBe(true);
+        });
+
+        it('[put]', async () => {
+            const loginScope = nock('https://api.thetradedesk.com/v3')
+                .put('/advertiser', { a: 'request' })
+                .reply(200, { a: 'result' });
+
+            const instance = new TradeDesk();
+            instance.setToken('atoken');
+
+            const result = await instance.put('/advertiser', { a: 'request' });
+
+            expect(result.status).toBe(200)
+            expect(await result.json()).toEqual({ a: 'result' })
+
+            expect(loginScope.isDone()).toBe(true);
+        });
+
+        it('[delete]', async () => {
+            const loginScope = nock('https://api.thetradedesk.com/v3')
+                .delete('/advertiser')
+                .reply(200, JSON.stringify('OKAY'));
+
+            const instance = new TradeDesk();
+            instance.setToken('atoken');
+
+            const result = await instance.delete('/advertiser');
+
+            expect(result.status).toBe(200)
+            expect(await result.json()).toEqual('OKAY')
+
+            expect(loginScope.isDone()).toBe(true);
+        });
+    })
 })
