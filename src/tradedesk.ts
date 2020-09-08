@@ -40,7 +40,7 @@ interface TradeDeskOptions {
      * Max number of retires to try a request when getting rate limited
      */
     maxRetries?: number
-    
+
     /**
      * Max delay for an exponential back off policy for when retrying requests. Time is in seconds.
      */
@@ -131,6 +131,13 @@ class TradeDesk {
         tokenExpiration?: number
     ): Promise<TradeDesk>;
 
+    /**
+     * Login to TradeDesk API and grab an authentication token
+     *
+     * @param username - The login of the user requesting the authentication token.
+     * @param password - The login of the user requesting the authentication token.
+     * @param tokenExpiration - The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire
+     */
     async login(
         username?: string,
         password?: string,
