@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/GoodwayGroup/lib-tradedesk#readme",
   "devDependencies": {
-    "@types/jest": "26.0.9",
+    "@types/jest": "26.0.13",
     "@types/node-fetch": "2.5.7",
     "@typescript-eslint/eslint-plugin": "3.8.0",
     "@typescript-eslint/parser": "3.8.0",
