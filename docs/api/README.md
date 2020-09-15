@@ -1,6 +1,6 @@
-[@goodwaygroup/lib-tradedesk - v1.0.0](README.md)
+[@goodwaygroup/lib-tradedesk - v1.0.1](README.md)
 
-# @goodwaygroup/lib-tradedesk - v1.0.0
+# @goodwaygroup/lib-tradedesk - v1.0.1
 
 ## Index
 
