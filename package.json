@@ -1,6 +1,6 @@
 {
   "name": "@goodwaygroup/lib-tradedesk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interact with Tradedesk's API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
