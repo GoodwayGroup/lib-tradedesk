@@ -2,6 +2,19 @@
 ## [Unreleased]
 
 
+<a name="v1.0.1"></a>
+## [v1.0.1] - 2020-09-14
+### Bug Fixes
+- **deps:** update dependency node-fetch to v2.6.1 [security] ([#22](https://github.com/GoodwayGroup/lib-tradedesk/issues/22))
+
+### Chore
+- **deps:** update dependency eslint-plugin-jest to v24.0.1 ([#24](https://github.com/GoodwayGroup/lib-tradedesk/issues/24))
+- **deps:** update dependency eslint to v7.9.0 ([#23](https://github.com/GoodwayGroup/lib-tradedesk/issues/23))
+- **deps:** update typescript-eslint monorepo to v4.1.1 ([#25](https://github.com/GoodwayGroup/lib-tradedesk/issues/25))
+- **deps:** pin dependencies ([#20](https://github.com/GoodwayGroup/lib-tradedesk/issues/20))
+- **docs:** updating docs for version v1.0.1
+
+
 <a name="v1.0.0"></a>
 ## [v1.0.0] - 2020-09-09
 ### Chore
@@ -21,6 +34,9 @@
 - **renovate:** update labels
 - **renovate:** configure bot
 - **specs:** minor update to specs for passthrough requests ([#19](https://github.com/GoodwayGroup/lib-tradedesk/issues/19))
+
+### Features
+- **release:** v1.0.0
 
 
 <a name="v0.0.0"></a>
@@ -48,5 +64,6 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...HEAD
+[v1.0.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v0.0.0...v1.0.0
