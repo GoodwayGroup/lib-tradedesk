@@ -1,4 +1,6 @@
-[@goodwaygroup/lib-tradedesk - v1.0.1](../README.md) › [ApiUrlEnvironments](apiurlenvironments.md)
+**[@goodwaygroup/lib-tradedesk - v1.0.2](../README.md)**
+
+> [Globals](../README.md) / ApiUrlEnvironments
 
 # Enumeration: ApiUrlEnvironments
 
@@ -11,16 +13,16 @@
 
 ## Enumeration members
 
-###  production
+### production
 
-• **production**: = "production"
+•  **production**:  = "production"
 
-*Defined in [src/tradedesk.ts:9](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L9)*
+*Defined in [src/tradedesk.ts:9](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L9)*
 
 ___
 
-###  sandbox
+### sandbox
 
-• **sandbox**: = "sandbox"
+•  **sandbox**:  = "sandbox"
 
-*Defined in [src/tradedesk.ts:10](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L10)*
+*Defined in [src/tradedesk.ts:10](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L10)*

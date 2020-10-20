@@ -1,4 +1,6 @@
-[@goodwaygroup/lib-tradedesk - v1.0.1](../README.md) › [TradeDeskOptions](tradedeskoptions.md)
+**[@goodwaygroup/lib-tradedesk - v1.0.2](../README.md)**
+
+> [Globals](../README.md) / TradeDeskOptions
 
 # Interface: TradeDeskOptions
 
@@ -10,91 +12,91 @@
 
 ### Properties
 
-* [agent](tradedeskoptions.md#optional-agent)
-* [apiUrl](tradedeskoptions.md#optional-apiurl)
-* [maxRetries](tradedeskoptions.md#optional-maxretries)
-* [maxRetryDelay](tradedeskoptions.md#optional-maxretrydelay)
-* [password](tradedeskoptions.md#optional-password)
-* [retryDelay](tradedeskoptions.md#optional-retrydelay)
-* [tokenExpiration](tradedeskoptions.md#optional-tokenexpiration)
-* [username](tradedeskoptions.md#optional-username)
+* [agent](tradedeskoptions.md#agent)
+* [apiUrl](tradedeskoptions.md#apiurl)
+* [maxRetries](tradedeskoptions.md#maxretries)
+* [maxRetryDelay](tradedeskoptions.md#maxretrydelay)
+* [password](tradedeskoptions.md#password)
+* [retryDelay](tradedeskoptions.md#retrydelay)
+* [tokenExpiration](tradedeskoptions.md#tokenexpiration)
+* [username](tradedeskoptions.md#username)
 
 ## Properties
 
-### `Optional` agent
+### agent
 
-• **agent**? : *Agent | function*
+• `Optional` **agent**: Agent \| (parsedUrl: URL) => Agent
 
-*Defined in [src/tradedesk.ts:22](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L22)*
+*Defined in [src/tradedesk.ts:22](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L22)*
 
 HTTP(s) Agent to use when making requests
 
 ___
 
-### `Optional` apiUrl
+### apiUrl
 
-• **apiUrl**? : *string*
+• `Optional` **apiUrl**: string
 
-*Defined in [src/tradedesk.ts:17](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L17)*
+*Defined in [src/tradedesk.ts:17](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L17)*
 
 The url of the Tradedesk API
 
 ___
 
-### `Optional` maxRetries
+### maxRetries
 
-• **maxRetries**? : *number*
+• `Optional` **maxRetries**: number
 
-*Defined in [src/tradedesk.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L42)*
+*Defined in [src/tradedesk.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L42)*
 
 Max number of retires to try a request when getting rate limited
 
 ___
 
-### `Optional` maxRetryDelay
+### maxRetryDelay
 
-• **maxRetryDelay**? : *number*
+• `Optional` **maxRetryDelay**: number
 
-*Defined in [src/tradedesk.ts:47](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L47)*
+*Defined in [src/tradedesk.ts:47](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L47)*
 
 Max delay for an exponential back off policy for when retrying requests. Time is in seconds.
 
 ___
 
-### `Optional` password
+### password
 
-• **password**? : *string*
+• `Optional` **password**: string
 
-*Defined in [src/tradedesk.ts:32](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L32)*
+*Defined in [src/tradedesk.ts:32](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L32)*
 
 The login of the user requesting the authentication token.
 
 ___
 
-### `Optional` retryDelay
+### retryDelay
 
-• **retryDelay**? : *number*
+• `Optional` **retryDelay**: number
 
-*Defined in [src/tradedesk.ts:52](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L52)*
+*Defined in [src/tradedesk.ts:52](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L52)*
 
 Base delay for an exponential back off policy for when retrying requests. Time is in seconds.
 
 ___
 
-### `Optional` tokenExpiration
+### tokenExpiration
 
-• **tokenExpiration**? : *number*
+• `Optional` **tokenExpiration**: number
 
-*Defined in [src/tradedesk.ts:37](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L37)*
+*Defined in [src/tradedesk.ts:37](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L37)*
 
 The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire
 
 ___
 
-### `Optional` username
+### username
 
-• **username**? : *string*
+• `Optional` **username**: string
 
-*Defined in [src/tradedesk.ts:27](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/tradedesk.ts#L27)*
+*Defined in [src/tradedesk.ts:27](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/tradedesk.ts#L27)*
 
 The login of the user requesting the authentication token.

@@ -1,10 +1,12 @@
-[@goodwaygroup/lib-tradedesk - v1.0.1](../README.md) › [InternalServerError](internalservererror.md)
+**[@goodwaygroup/lib-tradedesk - v1.0.2](../README.md)**
+
+> [Globals](../README.md) / InternalServerError
 
 # Class: InternalServerError
 
 ## Hierarchy
 
-* [Error](ratelimiterror.md#static-error)
+* [Error](ratelimiterror.md#error)
 
   ↳ **InternalServerError**
 
@@ -19,68 +21,68 @@
 * [message](internalservererror.md#message)
 * [name](internalservererror.md#name)
 * [response](internalservererror.md#response)
-* [stack](internalservererror.md#optional-stack)
-* [Error](internalservererror.md#static-error)
+* [stack](internalservererror.md#stack)
+* [Error](internalservererror.md#error)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new InternalServerError**(`message`: string, `response`: Response): *[InternalServerError](internalservererror.md)*
+\+ **new InternalServerError**(`message`: string, `response`: Response): [InternalServerError](internalservererror.md)
 
-*Defined in [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L64)*
+*Defined in [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L64)*
 
-**Parameters:**
+#### Parameters:
 
 Name | Type |
 ------ | ------ |
 `message` | string |
 `response` | Response |
 
-**Returns:** *[InternalServerError](internalservererror.md)*
+**Returns:** [InternalServerError](internalservererror.md)
 
 ## Properties
 
-###  message
+### message
 
-• **message**: *string*
+•  **message**: string
 
 *Inherited from [RateLimitError](ratelimiterror.md).[message](ratelimiterror.md#message)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:974
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
 
 ___
 
-###  name
+### name
 
-• **name**: *string* = "InternalServerError"
+•  **name**: string = "InternalServerError"
 
 *Overrides void*
 
-*Defined in [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L62)*
+*Defined in [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L62)*
 
 ___
 
-###  response
+### response
 
-• **response**: *Response*
+•  **response**: Response
 
-*Defined in [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L64)*
-
-___
-
-### `Optional` stack
-
-• **stack**? : *string*
-
-*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#optional-stack)*
-
-Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+*Defined in [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L64)*
 
 ___
 
-### `Static` Error
+### stack
 
-▪ **Error**: *ErrorConstructor*
+• `Optional` **stack**: string
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#stack)*
+
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
+
+___
+
+### Error
+
+▪ `Static` **Error**: ErrorConstructor
+
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*

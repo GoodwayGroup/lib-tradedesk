@@ -1,10 +1,12 @@
-[@goodwaygroup/lib-tradedesk - v1.0.1](../README.md) › [RateLimitError](ratelimiterror.md)
+**[@goodwaygroup/lib-tradedesk - v1.0.2](../README.md)**
+
+> [Globals](../README.md) / RateLimitError
 
 # Class: RateLimitError
 
 ## Hierarchy
 
-* [Error](ratelimiterror.md#static-error)
+* [Error](ratelimiterror.md#error)
 
   ↳ **RateLimitError**
 
@@ -20,18 +22,18 @@
 * [message](ratelimiterror.md#message)
 * [name](ratelimiterror.md#name)
 * [response](ratelimiterror.md#response)
-* [stack](ratelimiterror.md#optional-stack)
-* [Error](ratelimiterror.md#static-error)
+* [stack](ratelimiterror.md#stack)
+* [Error](ratelimiterror.md#error)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new RateLimitError**(`message`: string, `attempts`: number, `response`: Response): *[RateLimitError](ratelimiterror.md)*
+\+ **new RateLimitError**(`message`: string, `attempts`: number, `response`: Response): [RateLimitError](ratelimiterror.md)
 
-*Defined in [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L8)*
+*Defined in [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L8)*
 
-**Parameters:**
+#### Parameters:
 
 Name | Type |
 ------ | ------ |
@@ -39,58 +41,58 @@ Name | Type |
 `attempts` | number |
 `response` | Response |
 
-**Returns:** *[RateLimitError](ratelimiterror.md)*
+**Returns:** [RateLimitError](ratelimiterror.md)
 
 ## Properties
 
-###  attempts
+### attempts
 
-• **attempts**: *number*
+•  **attempts**: number
 
-*Defined in [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L6)*
+*Defined in [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L6)*
 
 ___
 
-###  message
+### message
 
-• **message**: *string*
+•  **message**: string
 
 *Inherited from [RateLimitError](ratelimiterror.md).[message](ratelimiterror.md#message)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:974
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
 
 ___
 
-###  name
+### name
 
-• **name**: *string* = "RateLimitError"
+•  **name**: string = "RateLimitError"
 
 *Overrides void*
 
-*Defined in [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L4)*
+*Defined in [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L4)*
 
 ___
 
-###  response
+### response
 
-• **response**: *Response*
+•  **response**: Response
 
-*Defined in [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/0960320/src/errors.ts#L8)*
-
-___
-
-### `Optional` stack
-
-• **stack**? : *string*
-
-*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#optional-stack)*
-
-Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+*Defined in [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L8)*
 
 ___
 
-### `Static` Error
+### stack
 
-▪ **Error**: *ErrorConstructor*
+• `Optional` **stack**: string
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#stack)*
+
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
+
+___
+
+### Error
+
+▪ `Static` **Error**: ErrorConstructor
+
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
