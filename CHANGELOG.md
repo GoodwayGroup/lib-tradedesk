@@ -2,6 +2,18 @@
 ## [Unreleased]
 
 
+<a name="v1.0.2"></a>
+## [v1.0.2] - 2020-10-20
+### Chore
+- **deps:** update jest, eslint, typedoc and bump node version ([#36](https://github.com/GoodwayGroup/lib-tradedesk/issues/36))
+- **deps:** update dependency [@types](https://github.com/types)/jest to v26.0.15 ([#40](https://github.com/GoodwayGroup/lib-tradedesk/issues/40))
+- **deps:** update typescript-eslint monorepo to v4.5.0 ([#39](https://github.com/GoodwayGroup/lib-tradedesk/issues/39))
+- **deps:** update dependency jest to v26.6.0 ([#38](https://github.com/GoodwayGroup/lib-tradedesk/issues/38))
+- **deps:** update dependency typedoc-plugin-markdown to v3.0.11 ([#37](https://github.com/GoodwayGroup/lib-tradedesk/issues/37))
+- **deps:** update dependency typedoc-plugin-markdown to v3.0.9 ([#28](https://github.com/GoodwayGroup/lib-tradedesk/issues/28))
+- **docs:** updating docs for version v1.0.2
+
+
 <a name="v1.0.1"></a>
 ## [v1.0.1] - 2020-09-14
 ### Bug Fixes
@@ -13,6 +25,9 @@
 - **deps:** update typescript-eslint monorepo to v4.1.1 ([#25](https://github.com/GoodwayGroup/lib-tradedesk/issues/25))
 - **deps:** pin dependencies ([#20](https://github.com/GoodwayGroup/lib-tradedesk/issues/20))
 - **docs:** updating docs for version v1.0.1
+
+### Features
+- **release:** v1.0.1
 
 
 <a name="v1.0.0"></a>
@@ -64,6 +79,7 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...HEAD
+[v1.0.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v0.0.0...v1.0.0
