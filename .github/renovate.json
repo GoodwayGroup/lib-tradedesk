@@ -1,5 +1,8 @@
 {
     "extends": [
         "github>GoodwayGroup/renovate-config"
+    ],
+    "ignoreDeps": [
+        "typedoc"
     ]
 }
