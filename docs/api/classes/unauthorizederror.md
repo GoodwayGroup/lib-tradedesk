@@ -1,4 +1,4 @@
-**[@goodwaygroup/lib-tradedesk - v1.0.2](../README.md)**
+**[@goodwaygroup/lib-tradedesk - v1.0.3](../README.md)**
 
 > [Globals](../README.md) / UnauthorizedError
 
@@ -30,7 +30,7 @@
 
 \+ **new UnauthorizedError**(`message`: string, `response`: Response): [UnauthorizedError](unauthorizederror.md)
 
-*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L53)*
+*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/02741c3/src/errors.ts#L53)*
 
 #### Parameters:
 
@@ -59,7 +59,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L51)*
+*Defined in [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/02741c3/src/errors.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 •  **response**: Response
 
-*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/errors.ts#L53)*
+*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/02741c3/src/errors.ts#L53)*
 
 ___
 

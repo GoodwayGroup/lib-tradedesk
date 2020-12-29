@@ -1,4 +1,4 @@
-**[@goodwaygroup/lib-tradedesk - v1.0.2](../README.md)**
+**[@goodwaygroup/lib-tradedesk - v1.0.3](../README.md)**
 
 > [Globals](../README.md) / LoginResponse
 
@@ -20,4 +20,4 @@
 
 •  **Token**: string
 
-*Defined in [src/responses.ts:2](https://github.com/GoodwayGroup/lib-tradedesk/blob/2a77e3f/src/responses.ts#L2)*
+*Defined in [src/responses.ts:2](https://github.com/GoodwayGroup/lib-tradedesk/blob/02741c3/src/responses.ts#L2)*
