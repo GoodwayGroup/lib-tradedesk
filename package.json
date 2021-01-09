@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
+    "test:watch": "jest --watch  --coverageReporters=\"lcov\" --coverage",
     "prepare": "npm run build",
     "build": "tsc",
     "lint": "eslint .",
@@ -90,6 +91,7 @@
     ]
   },
   "dependencies": {
+    "crypto-js": "^4.0.0",
     "node-fetch": "2.6.1"
   }
 }
