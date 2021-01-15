@@ -6,6 +6,15 @@ import CryptoJS from 'crypto-js';
 import Base64 from 'crypto-js/enc-base64';
 
 
+export enum DatacenterHostnames {
+    USEastCoast = 'use-data.adsrvr.org', // US East Coast
+    UKEU = 'euw-data.adsrvr.org', // UK/EU
+    APAC = 'sin-data.adsrvr.org', // APAC
+    USWestCoast = 'usw-data.adsrvr.org', // US West Coast
+    Tokyo = 'tok-data.adsrvr.org', // Tokyo
+    China = 'https://data-cn2.adsrvr.cn' // China
+}
+
 interface DataProviderOptions {
     /**
      * The url of the Tradedesk Data API
@@ -48,12 +57,32 @@ class DataProvider {
     constructor(secretKey: string, options: DataProviderOptions = {}) {
         this.secretKey = secretKey
         this.options = {
-            apiUrl: 'https://use-data.adsrvr.org',
+            apiUrl: `https://${DatacenterHostnames.USEastCoast}`,
             maxRetries: 3,
             maxRetryDelay: 60,
             retryDelay: 5,
             ...options,
         };
+    }
+
+    /**
+     * Set the API url based on an enumerated list
+     */
+    setApiUrl(dataCenter: DatacenterHostnames): DataProvider;
+
+    /**
+     * Set the API Url to an explicit url
+     */
+    setApiUrl(url: string): DataProvider;
+
+    setApiUrl(arg: any): DataProvider {
+        if (Object.values(DatacenterHostnames).includes(arg)) {
+            this.options.apiUrl = `https://${arg}`;
+        } else {
+            this.options.apiUrl = arg;
+        }
+
+        return this;
     }
 
 

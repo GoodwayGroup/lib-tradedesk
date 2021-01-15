@@ -1,5 +1,6 @@
 import nock from 'nock';
 import { DataProvider } from '.';
+import { DatacenterHostnames } from './dataProvider';
 import { RateLimitError, BadRequestError } from './errors';
 
 
@@ -100,6 +101,22 @@ describe('DataProvider Class', () => {
 
             await expect(instance.post(ROUTE, EMPTY_ITEMS_PAYLOAD)).rejects.toBeInstanceOf(BadRequestError);
             expect(postScope.isDone()).toBe(true);
+        });
+
+        it('should set apiUrl by DatacenterHostnames', () => {
+            const instance = new DataProvider("abc");
+            instance.setApiUrl(DatacenterHostnames.USWestCoast)
+
+            expect(instance.options.apiUrl).toEqual('https://usw-data.adsrvr.org');
+        });
+
+
+        it('should set apiUrl by string', () => {
+            const uri = "http://www.google.com"
+            const instance = new DataProvider("abc");
+            instance.setApiUrl(uri)
+
+            expect(instance.options.apiUrl).toEqual(uri);
         });
 
     })
