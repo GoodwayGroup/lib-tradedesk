@@ -1,9 +1,8 @@
 import * as http from 'http';
-import fetch, { RequestInit, Response, HeadersInit, BodyInit } from 'node-fetch';
+import fetch, { RequestInit, Response, HeadersInit } from 'node-fetch';
 import { RateLimitError, BadRequestError, InternalServerError } from './errors';
 import delay from './delay';
-import CryptoJS from 'crypto-js';
-import Base64 from 'crypto-js/enc-base64';
+import crypto from 'crypto';
 
 
 export enum DatacenterHostnames {
@@ -73,10 +72,9 @@ class DataProvider {
     /**
      * Set the API Url to an explicit url
      */
-    setApiUrl(url: string): DataProvider;
-
-    setApiUrl(arg: any): DataProvider {
-        if (Object.values(DatacenterHostnames).includes(arg)) {
+    setApiUrl(arg: string): DataProvider {
+        const values = Object.values(DatacenterHostnames) as Array<string>;
+        if (values.includes(arg)) {
             this.options.apiUrl = `https://${arg}`;
         } else {
             this.options.apiUrl = arg;
@@ -89,8 +87,10 @@ class DataProvider {
     /**
      * Creates a HMAC SHA1 Signature
      */
-    createSignature(body: BodyInit): string {
-        return Base64.stringify(CryptoJS.HmacSHA1(body, this.secretKey));
+    createSignature(body: string): string {
+        return crypto.createHmac('sha1', this.secretKey)
+            .update( body )
+            .digest('base64');
     }
 
     /**
@@ -108,7 +108,7 @@ class DataProvider {
         options: RequestInit,
         attempts = 0,
     ): Promise<Response> {
-        const ttdSignature = this.createSignature(options.body);
+        const ttdSignature = this.createSignature(options.body as string);
 
         // Apply token header
         const mergedOptions: RequestInit = {
