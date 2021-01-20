@@ -12,7 +12,7 @@ export enum DatacenterHostnames {
     APAC = 'sin-data.adsrvr.org', // APAC
     USWestCoast = 'usw-data.adsrvr.org', // US West Coast
     Tokyo = 'tok-data.adsrvr.org', // Tokyo
-    China = 'https://data-cn2.adsrvr.cn' // China
+    China = 'data-cn2.adsrvr.cn' // China
 }
 
 interface DataProviderOptions {
