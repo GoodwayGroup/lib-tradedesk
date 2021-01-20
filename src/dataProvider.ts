@@ -65,14 +65,9 @@ class DataProvider {
     }
 
     /**
-     * Set the API url based on an enumerated list
-     */
-    setApiUrl(dataCenter: DatacenterHostnames): DataProvider;
-
-    /**
      * Set the API Url to an explicit url
      */
-    setApiUrl(arg: string): DataProvider {
+    setApiUrl(arg: DatacenterHostnames | string): DataProvider {
         const values = Object.values(DatacenterHostnames) as Array<string>;
         if (values.includes(arg)) {
             this.options.apiUrl = `https://${arg}`;
