@@ -6,12 +6,12 @@ import crypto from 'crypto';
 
 
 export enum DatacenterHostnames {
-    USEastCoast = 'use-data.adsrvr.org', // US East Coast
-    UKEU = 'euw-data.adsrvr.org', // UK/EU
-    APAC = 'sin-data.adsrvr.org', // APAC
-    USWestCoast = 'usw-data.adsrvr.org', // US West Coast
-    Tokyo = 'tok-data.adsrvr.org', // Tokyo
-    China = 'data-cn2.adsrvr.cn' // China
+    USEastCoast = 'https://use-data.adsrvr.org', // US East Coast
+    UKEU = 'https://euw-data.adsrvr.org', // UK/EU
+    APAC = 'https://sin-data.adsrvr.org', // APAC
+    USWestCoast = 'https://usw-data.adsrvr.org', // US West Coast
+    Tokyo = 'https://tok-data.adsrvr.org', // Tokyo
+    China = 'https://data-cn2.adsrvr.cn' // China
 }
 
 interface DataProviderOptions {
@@ -56,7 +56,7 @@ class DataProvider {
     constructor(secretKey: string, options: DataProviderOptions = {}) {
         this.secretKey = secretKey
         this.options = {
-            apiUrl: `https://${DatacenterHostnames.USEastCoast}`,
+            apiUrl: DatacenterHostnames.USEastCoast,
             maxRetries: 3,
             maxRetryDelay: 60,
             retryDelay: 5,
@@ -67,13 +67,8 @@ class DataProvider {
     /**
      * Set the API Url to an explicit url
      */
-    setApiUrl(arg: DatacenterHostnames | string): DataProvider {
-        const values = Object.values(DatacenterHostnames) as Array<string>;
-        if (values.includes(arg)) {
-            this.options.apiUrl = `https://${arg}`;
-        } else {
-            this.options.apiUrl = arg;
-        }
+    setApiUrl(url: DatacenterHostnames | string): DataProvider {
+        this.options.apiUrl = url;
 
         return this;
     }
@@ -84,7 +79,7 @@ class DataProvider {
      */
     createSignature(body: string): string {
         return crypto.createHmac('sha1', this.secretKey)
-            .update( body )
+            .update(body)
             .digest('base64');
     }
 
