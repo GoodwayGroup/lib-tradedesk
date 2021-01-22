@@ -2,6 +2,21 @@
 ## [Unreleased]
 
 
+<a name="v1.1.0"></a>
+## [v1.1.0] - 2021-01-22
+### Chore
+- **deps:** update dependency eslint to v7.17.0 ([#60](https://github.com/GoodwayGroup/lib-tradedesk/issues/60))
+- **deps:** update dependency [@types](https://github.com/types)/node-fetch to v2.5.8 ([#66](https://github.com/GoodwayGroup/lib-tradedesk/issues/66))
+- **deps:** update typescript-eslint monorepo to v4.13.0 ([#62](https://github.com/GoodwayGroup/lib-tradedesk/issues/62))
+- **deps:** update dependency [@types](https://github.com/types)/jest to v26.0.20 ([#64](https://github.com/GoodwayGroup/lib-tradedesk/issues/64))
+- **deps:** update dependency husky to v4.3.7 ([#63](https://github.com/GoodwayGroup/lib-tradedesk/issues/63))
+- **deps:** update node.js to v12.20.1 ([#61](https://github.com/GoodwayGroup/lib-tradedesk/issues/61))
+- **docs:** updating docs for version v1.1.0
+
+### Features
+- **DataProvider:** added class to support the data api ttdsignature header ([#65](https://github.com/GoodwayGroup/lib-tradedesk/issues/65))
+
+
 <a name="v1.0.3"></a>
 ## [v1.0.3] - 2020-12-29
 ### Chore
@@ -22,6 +37,9 @@
 - **deps:** update dependency eslint to v7.12.1 ([#43](https://github.com/GoodwayGroup/lib-tradedesk/issues/43))
 - **deps:** update dependency ts-jest to v26.4.3 ([#42](https://github.com/GoodwayGroup/lib-tradedesk/issues/42))
 - **docs:** updating docs for version v1.0.3
+
+### Features
+- **release:** v1.0.3
 
 
 <a name="v1.0.2"></a>
@@ -104,7 +122,8 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...v1.1.0
 [v1.0.3]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.0...v1.0.1
