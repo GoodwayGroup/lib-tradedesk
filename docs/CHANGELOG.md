@@ -2,6 +2,28 @@
 ## [Unreleased]
 
 
+<a name="v1.0.3"></a>
+## [v1.0.3] - 2020-12-29
+### Chore
+- **deps:** update dependency jest to v26.6.1 ([#41](https://github.com/GoodwayGroup/lib-tradedesk/issues/41))
+- **deps:** rollback and pin typedoc to v0.19.2 due to breaking changes
+- **deps:** updated [@types](https://github.com/types)/jest, eslint-plugin-jest, ts-jest and jest
+- **deps:** update dependency eslint to v7.16.0 ([#48](https://github.com/GoodwayGroup/lib-tradedesk/issues/48))
+- **deps:** update dependency typedoc-plugin-markdown to v3.1.1 ([#57](https://github.com/GoodwayGroup/lib-tradedesk/issues/57))
+- **deps:** update dependency eslint-plugin-tsdoc to v0.2.10 ([#54](https://github.com/GoodwayGroup/lib-tradedesk/issues/54))
+- **deps:** update node.js to v12.20.0 ([#52](https://github.com/GoodwayGroup/lib-tradedesk/issues/52))
+- **deps:** update typescript-eslint monorepo to v4.11.1 ([#47](https://github.com/GoodwayGroup/lib-tradedesk/issues/47))
+- **deps:** update dependency nock to v13.0.5 ([#50](https://github.com/GoodwayGroup/lib-tradedesk/issues/50))
+- **deps:** update dependency typescript to v4.1.3 ([#53](https://github.com/GoodwayGroup/lib-tradedesk/issues/53))
+- **deps:** update dependency typedoc to v0.20.1 ([#58](https://github.com/GoodwayGroup/lib-tradedesk/issues/58))
+- **deps:** update dependency husky to v4.3.6 ([#56](https://github.com/GoodwayGroup/lib-tradedesk/issues/56))
+- **deps:** update typescript-eslint monorepo to v4.6.0 ([#44](https://github.com/GoodwayGroup/lib-tradedesk/issues/44))
+- **deps:** update dependency typescript to v4.0.5 ([#45](https://github.com/GoodwayGroup/lib-tradedesk/issues/45))
+- **deps:** update dependency eslint to v7.12.1 ([#43](https://github.com/GoodwayGroup/lib-tradedesk/issues/43))
+- **deps:** update dependency ts-jest to v26.4.3 ([#42](https://github.com/GoodwayGroup/lib-tradedesk/issues/42))
+- **docs:** updating docs for version v1.0.3
+
+
 <a name="v1.0.2"></a>
 ## [v1.0.2] - 2020-10-20
 ### Chore
@@ -12,6 +34,9 @@
 - **deps:** update dependency typedoc-plugin-markdown to v3.0.11 ([#37](https://github.com/GoodwayGroup/lib-tradedesk/issues/37))
 - **deps:** update dependency typedoc-plugin-markdown to v3.0.9 ([#28](https://github.com/GoodwayGroup/lib-tradedesk/issues/28))
 - **docs:** updating docs for version v1.0.2
+
+### Features
+- **release:** v1.0.2
 
 
 <a name="v1.0.1"></a>
@@ -79,7 +104,8 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...HEAD
+[v1.0.3]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v0.0.0...v1.0.0
