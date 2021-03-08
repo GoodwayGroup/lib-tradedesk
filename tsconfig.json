@@ -13,11 +13,11 @@
         "src/**/*"
     ],
     "typedocOptions": {
-        "mode": "file",
         "out": "docs/api",
         "exclude": "src/**/*.spec.ts",
         "includeVersion": true,
-        "stripInternal": true,
-        "readme": "none"
+        "excludeInternal": true,
+        "readme": "none",
+        "entryPoints": ["src/index.ts"]
     }
 }
