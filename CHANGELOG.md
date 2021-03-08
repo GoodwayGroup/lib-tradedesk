@@ -2,6 +2,28 @@
 ## [Unreleased]
 
 
+<a name="v1.1.1"></a>
+## [v1.1.1] - 2021-03-07
+### Bug Fixes
+- **typedoc:** update typdoc config for compatibility with new version
+
+### Chore
+- **deps:** update all non-major dependencies ([#80](https://github.com/GoodwayGroup/lib-tradedesk/issues/80))
+- **deps:** update dependency marked to 2.0.0 [security] ([#81](https://github.com/GoodwayGroup/lib-tradedesk/issues/81))
+- **docs:** updating docs for version v1.1.1
+- **github action:** add Publish action
+
+### Pull Requests
+- Merge pull request [#73](https://github.com/GoodwayGroup/lib-tradedesk/issues/73) from GoodwayGroup/release/v1.1.0
+
+
+###### Squashed Commits:
+```
+feat(release): v1.1.0
+```
+
+
+
 <a name="v1.1.0"></a>
 ## [v1.1.0] - 2021-01-22
 ### Chore
@@ -15,6 +37,7 @@
 
 ### Features
 - **DataProvider:** added class to support the data api ttdsignature header ([#65](https://github.com/GoodwayGroup/lib-tradedesk/issues/65))
+- **release:** v1.1.0
 
 
 <a name="v1.0.3"></a>
@@ -122,7 +145,8 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...HEAD
+[v1.1.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...v1.1.0
 [v1.0.3]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...v1.0.2
