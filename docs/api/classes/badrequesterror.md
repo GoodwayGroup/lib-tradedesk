@@ -1,88 +1,131 @@
-**[@goodwaygroup/lib-tradedesk - v1.1.0](../README.md)**
-
-> [Globals](../README.md) / BadRequestError
+[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / BadRequestError
 
 # Class: BadRequestError
 
 ## Hierarchy
 
-* [Error](ratelimiterror.md#error)
+* *Error*
 
   ↳ **BadRequestError**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](badrequesterror.md#constructor)
+- [constructor](badrequesterror.md#constructor)
 
 ### Properties
 
-* [message](badrequesterror.md#message)
-* [name](badrequesterror.md#name)
-* [response](badrequesterror.md#response)
-* [stack](badrequesterror.md#stack)
-* [Error](badrequesterror.md#error)
+- [message](badrequesterror.md#message)
+- [name](badrequesterror.md#name)
+- [prepareStackTrace](badrequesterror.md#preparestacktrace)
+- [response](badrequesterror.md#response)
+- [stack](badrequesterror.md#stack)
+- [stackTraceLimit](badrequesterror.md#stacktracelimit)
+
+### Methods
+
+- [captureStackTrace](badrequesterror.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-\+ **new BadRequestError**(`message`: string, `response`: Response): [BadRequestError](badrequesterror.md)
-
-*Defined in [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L20)*
+\+ **new BadRequestError**(`message`: *string*, `response`: [*Response*](response.md)): [*BadRequestError*](badrequesterror.md)
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`message` | string |
-`response` | Response |
+:------ | :------ |
+`message` | *string* |
+`response` | [*Response*](response.md) |
 
-**Returns:** [BadRequestError](badrequesterror.md)
+**Returns:** [*BadRequestError*](badrequesterror.md)
+
+Defined in: [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L20)
 
 ## Properties
 
 ### message
 
-•  **message**: string
+• **message**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[message](ratelimiterror.md#message)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
 ### name
 
-•  **name**: string = "BadRequestError"
+• **name**: *string*= 'BadRequestError'
 
-*Overrides void*
+Defined in: [src/errors.ts:18](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L18)
 
-*Defined in [src/errors.ts:18](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L18)*
+___
+
+### prepareStackTrace
+
+• `Optional` **prepareStackTrace**: (`err`: Error, `stackTraces`: CallSite[]) => *any*
+
+Optional override for formatting stack traces
+
+**`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+
+#### Type declaration:
+
+▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`err` | Error |
+`stackTraces` | CallSite[] |
+
+**Returns:** *any*
+
+Defined in: node_modules/@types/node/globals.d.ts:11
+
+Defined in: node_modules/@types/node/globals.d.ts:11
 
 ___
 
 ### response
 
-•  **response**: Response
+• **response**: [*Response*](response.md)
 
-*Defined in [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L20)*
+Defined in: [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L20)
 
 ___
 
 ### stack
 
-• `Optional` **stack**: string
+• `Optional` **stack**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#stack)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
-### Error
+### stackTraceLimit
 
-▪ `Static` **Error**: ErrorConstructor
+• **stackTraceLimit**: *number*
 
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
+Defined in: node_modules/@types/node/globals.d.ts:13
+
+## Methods
+
+### captureStackTrace
+
+▸ **captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+
+Create .stack property on a target object
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`targetObject` | *object* |
+`constructorOpt?` | Function |
+
+**Returns:** *void*
+
+Defined in: node_modules/@types/node/globals.d.ts:4

@@ -1,98 +1,141 @@
-**[@goodwaygroup/lib-tradedesk - v1.1.0](../README.md)**
-
-> [Globals](../README.md) / RateLimitError
+[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / RateLimitError
 
 # Class: RateLimitError
 
 ## Hierarchy
 
-* [Error](ratelimiterror.md#error)
+* *Error*
 
   ↳ **RateLimitError**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](ratelimiterror.md#constructor)
+- [constructor](ratelimiterror.md#constructor)
 
 ### Properties
 
-* [attempts](ratelimiterror.md#attempts)
-* [message](ratelimiterror.md#message)
-* [name](ratelimiterror.md#name)
-* [response](ratelimiterror.md#response)
-* [stack](ratelimiterror.md#stack)
-* [Error](ratelimiterror.md#error)
+- [attempts](ratelimiterror.md#attempts)
+- [message](ratelimiterror.md#message)
+- [name](ratelimiterror.md#name)
+- [response](ratelimiterror.md#response)
+- [stack](ratelimiterror.md#stack)
+- [prepareStackTrace](ratelimiterror.md#preparestacktrace)
+- [stackTraceLimit](ratelimiterror.md#stacktracelimit)
+
+### Methods
+
+- [captureStackTrace](ratelimiterror.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-\+ **new RateLimitError**(`message`: string, `attempts`: number, `response`: Response): [RateLimitError](ratelimiterror.md)
-
-*Defined in [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L8)*
+\+ **new RateLimitError**(`message`: *string*, `attempts`: *number*, `response`: [*Response*](response.md)): [*RateLimitError*](ratelimiterror.md)
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`message` | string |
-`attempts` | number |
-`response` | Response |
+:------ | :------ |
+`message` | *string* |
+`attempts` | *number* |
+`response` | [*Response*](response.md) |
 
-**Returns:** [RateLimitError](ratelimiterror.md)
+**Returns:** [*RateLimitError*](ratelimiterror.md)
+
+Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L8)
 
 ## Properties
 
 ### attempts
 
-•  **attempts**: number
+• **attempts**: *number*
 
-*Defined in [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L6)*
+Defined in: [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L6)
 
 ___
 
 ### message
 
-•  **message**: string
+• **message**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[message](ratelimiterror.md#message)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
 ### name
 
-•  **name**: string = "RateLimitError"
+• **name**: *string*= 'RateLimitError'
 
-*Overrides void*
-
-*Defined in [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L4)*
+Defined in: [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L4)
 
 ___
 
 ### response
 
-•  **response**: Response
+• **response**: [*Response*](response.md)
 
-*Defined in [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L8)*
+Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L8)
 
 ___
 
 ### stack
 
-• `Optional` **stack**: string
+• `Optional` **stack**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#stack)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
-### Error
+### prepareStackTrace
 
-▪ `Static` **Error**: ErrorConstructor
+▪ `Optional` `Static` **prepareStackTrace**: (`err`: Error, `stackTraces`: CallSite[]) => *any*
 
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
+Optional override for formatting stack traces
+
+**`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+
+#### Type declaration:
+
+▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`err` | Error |
+`stackTraces` | CallSite[] |
+
+**Returns:** *any*
+
+Defined in: node_modules/@types/node/globals.d.ts:11
+
+Defined in: node_modules/@types/node/globals.d.ts:11
+
+___
+
+### stackTraceLimit
+
+▪ `Static` **stackTraceLimit**: *number*
+
+Defined in: node_modules/@types/node/globals.d.ts:13
+
+## Methods
+
+### captureStackTrace
+
+▸ `Static`**captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+
+Create .stack property on a target object
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`targetObject` | *object* |
+`constructorOpt?` | Function |
+
+**Returns:** *void*
+
+Defined in: node_modules/@types/node/globals.d.ts:4

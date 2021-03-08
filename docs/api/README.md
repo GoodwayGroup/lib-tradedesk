@@ -1,29 +1,32 @@
-**[@goodwaygroup/lib-tradedesk - v1.1.0](README.md)**
+@goodwaygroup/lib-tradedesk - v1.1.1
 
-> Globals
+# @goodwaygroup/lib-tradedesk - v1.1.1
 
-# @goodwaygroup/lib-tradedesk - v1.1.0
+## Table of contents
 
-## Index
+### References
+
+- [default](README.md#default)
 
 ### Enumerations
 
-* [ApiUrlEnvironments](enums/apiurlenvironments.md)
-* [DatacenterHostnames](enums/datacenterhostnames.md)
+- [ApiUrlEnvironments](enums/apiurlenvironments.md)
+- [DatacenterHostnames](enums/datacenterhostnames.md)
 
 ### Classes
 
-* [BadRequestError](classes/badrequesterror.md)
-* [DataProvider](classes/dataprovider.md)
-* [ForbiddenError](classes/forbiddenerror.md)
-* [GoneError](classes/goneerror.md)
-* [InternalServerError](classes/internalservererror.md)
-* [RateLimitError](classes/ratelimiterror.md)
-* [TradeDesk](classes/tradedesk.md)
-* [UnauthorizedError](classes/unauthorizederror.md)
+- [BadRequestError](classes/badrequesterror.md)
+- [DataProvider](classes/dataprovider.md)
+- [ForbiddenError](classes/forbiddenerror.md)
+- [GoneError](classes/goneerror.md)
+- [InternalServerError](classes/internalservererror.md)
+- [RateLimitError](classes/ratelimiterror.md)
+- [Response](classes/response.md)
+- [TradeDesk](classes/tradedesk.md)
+- [UnauthorizedError](classes/unauthorizederror.md)
 
-### Interfaces
+## References
 
-* [DataProviderOptions](interfaces/dataprovideroptions.md)
-* [LoginResponse](interfaces/loginresponse.md)
-* [TradeDeskOptions](interfaces/tradedeskoptions.md)
+### default
+
+Renames and exports: [TradeDesk](classes/tradedesk.md)

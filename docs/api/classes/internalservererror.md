@@ -1,88 +1,131 @@
-**[@goodwaygroup/lib-tradedesk - v1.1.0](../README.md)**
-
-> [Globals](../README.md) / InternalServerError
+[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / InternalServerError
 
 # Class: InternalServerError
 
 ## Hierarchy
 
-* [Error](ratelimiterror.md#error)
+* *Error*
 
   ↳ **InternalServerError**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](internalservererror.md#constructor)
+- [constructor](internalservererror.md#constructor)
 
 ### Properties
 
-* [message](internalservererror.md#message)
-* [name](internalservererror.md#name)
-* [response](internalservererror.md#response)
-* [stack](internalservererror.md#stack)
-* [Error](internalservererror.md#error)
+- [message](internalservererror.md#message)
+- [name](internalservererror.md#name)
+- [prepareStackTrace](internalservererror.md#preparestacktrace)
+- [response](internalservererror.md#response)
+- [stack](internalservererror.md#stack)
+- [stackTraceLimit](internalservererror.md#stacktracelimit)
+
+### Methods
+
+- [captureStackTrace](internalservererror.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-\+ **new InternalServerError**(`message`: string, `response`: Response): [InternalServerError](internalservererror.md)
-
-*Defined in [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L64)*
+\+ **new InternalServerError**(`message`: *string*, `response`: [*Response*](response.md)): [*InternalServerError*](internalservererror.md)
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`message` | string |
-`response` | Response |
+:------ | :------ |
+`message` | *string* |
+`response` | [*Response*](response.md) |
 
-**Returns:** [InternalServerError](internalservererror.md)
+**Returns:** [*InternalServerError*](internalservererror.md)
+
+Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L64)
 
 ## Properties
 
 ### message
 
-•  **message**: string
+• **message**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[message](ratelimiterror.md#message)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
 ### name
 
-•  **name**: string = "InternalServerError"
+• **name**: *string*= 'InternalServerError'
 
-*Overrides void*
+Defined in: [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L62)
 
-*Defined in [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L62)*
+___
+
+### prepareStackTrace
+
+• `Optional` **prepareStackTrace**: (`err`: Error, `stackTraces`: CallSite[]) => *any*
+
+Optional override for formatting stack traces
+
+**`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+
+#### Type declaration:
+
+▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`err` | Error |
+`stackTraces` | CallSite[] |
+
+**Returns:** *any*
+
+Defined in: node_modules/@types/node/globals.d.ts:11
+
+Defined in: node_modules/@types/node/globals.d.ts:11
 
 ___
 
 ### response
 
-•  **response**: Response
+• **response**: [*Response*](response.md)
 
-*Defined in [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L64)*
+Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L64)
 
 ___
 
 ### stack
 
-• `Optional` **stack**: string
+• `Optional` **stack**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#stack)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
-### Error
+### stackTraceLimit
 
-▪ `Static` **Error**: ErrorConstructor
+• **stackTraceLimit**: *number*
 
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
+Defined in: node_modules/@types/node/globals.d.ts:13
+
+## Methods
+
+### captureStackTrace
+
+▸ **captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+
+Create .stack property on a target object
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`targetObject` | *object* |
+`constructorOpt?` | Function |
+
+**Returns:** *void*
+
+Defined in: node_modules/@types/node/globals.d.ts:4

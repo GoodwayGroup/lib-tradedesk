@@ -1,88 +1,131 @@
-**[@goodwaygroup/lib-tradedesk - v1.1.0](../README.md)**
-
-> [Globals](../README.md) / UnauthorizedError
+[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / UnauthorizedError
 
 # Class: UnauthorizedError
 
 ## Hierarchy
 
-* [Error](ratelimiterror.md#error)
+* *Error*
 
   ↳ **UnauthorizedError**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](unauthorizederror.md#constructor)
+- [constructor](unauthorizederror.md#constructor)
 
 ### Properties
 
-* [message](unauthorizederror.md#message)
-* [name](unauthorizederror.md#name)
-* [response](unauthorizederror.md#response)
-* [stack](unauthorizederror.md#stack)
-* [Error](unauthorizederror.md#error)
+- [message](unauthorizederror.md#message)
+- [name](unauthorizederror.md#name)
+- [prepareStackTrace](unauthorizederror.md#preparestacktrace)
+- [response](unauthorizederror.md#response)
+- [stack](unauthorizederror.md#stack)
+- [stackTraceLimit](unauthorizederror.md#stacktracelimit)
+
+### Methods
+
+- [captureStackTrace](unauthorizederror.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-\+ **new UnauthorizedError**(`message`: string, `response`: Response): [UnauthorizedError](unauthorizederror.md)
-
-*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L53)*
+\+ **new UnauthorizedError**(`message`: *string*, `response`: [*Response*](response.md)): [*UnauthorizedError*](unauthorizederror.md)
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`message` | string |
-`response` | Response |
+:------ | :------ |
+`message` | *string* |
+`response` | [*Response*](response.md) |
 
-**Returns:** [UnauthorizedError](unauthorizederror.md)
+**Returns:** [*UnauthorizedError*](unauthorizederror.md)
+
+Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L53)
 
 ## Properties
 
 ### message
 
-•  **message**: string
+• **message**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[message](ratelimiterror.md#message)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
 ### name
 
-•  **name**: string = "UnauthorizedError"
+• **name**: *string*= 'UnauthorizedError'
 
-*Overrides void*
+Defined in: [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L51)
 
-*Defined in [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L51)*
+___
+
+### prepareStackTrace
+
+• `Optional` **prepareStackTrace**: (`err`: Error, `stackTraces`: CallSite[]) => *any*
+
+Optional override for formatting stack traces
+
+**`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+
+#### Type declaration:
+
+▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`err` | Error |
+`stackTraces` | CallSite[] |
+
+**Returns:** *any*
+
+Defined in: node_modules/@types/node/globals.d.ts:11
+
+Defined in: node_modules/@types/node/globals.d.ts:11
 
 ___
 
 ### response
 
-•  **response**: Response
+• **response**: [*Response*](response.md)
 
-*Defined in [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/errors.ts#L53)*
+Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L53)
 
 ___
 
 ### stack
 
-• `Optional` **stack**: string
+• `Optional` **stack**: *string*
 
-*Inherited from [RateLimitError](ratelimiterror.md).[stack](ratelimiterror.md#stack)*
-
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
-### Error
+### stackTraceLimit
 
-▪ `Static` **Error**: ErrorConstructor
+• **stackTraceLimit**: *number*
 
-*Defined in node_modules/typescript/lib/lib.es5.d.ts:984*
+Defined in: node_modules/@types/node/globals.d.ts:13
+
+## Methods
+
+### captureStackTrace
+
+▸ **captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+
+Create .stack property on a target object
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`targetObject` | *object* |
+`constructorOpt?` | Function |
+
+**Returns:** *void*
+
+Defined in: node_modules/@types/node/globals.d.ts:4

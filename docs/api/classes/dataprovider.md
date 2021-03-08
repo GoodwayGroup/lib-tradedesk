@@ -1,159 +1,153 @@
-**[@goodwaygroup/lib-tradedesk - v1.1.0](../README.md)**
-
-> [Globals](../README.md) / DataProvider
+[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / DataProvider
 
 # Class: DataProvider
 
-## Hierarchy
-
-* **DataProvider**
-
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](dataprovider.md#constructor)
+- [constructor](dataprovider.md#constructor)
 
 ### Properties
 
-* [options](dataprovider.md#options)
-* [secretKey](dataprovider.md#secretkey)
+- [options](dataprovider.md#options)
+- [secretKey](dataprovider.md#secretkey)
 
 ### Methods
 
-* [createSignature](dataprovider.md#createsignature)
-* [makeUrl](dataprovider.md#makeurl)
-* [post](dataprovider.md#post)
-* [request](dataprovider.md#request)
-* [setApiUrl](dataprovider.md#setapiurl)
+- [createSignature](dataprovider.md#createsignature)
+- [makeUrl](dataprovider.md#makeurl)
+- [post](dataprovider.md#post)
+- [request](dataprovider.md#request)
+- [setApiUrl](dataprovider.md#setapiurl)
 
 ## Constructors
 
 ### constructor
 
-\+ **new DataProvider**(`secretKey`: string, `options?`: [DataProviderOptions](../interfaces/dataprovideroptions.md)): [DataProvider](dataprovider.md)
-
-*Defined in [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L54)*
+\+ **new DataProvider**(`secretKey`: *string*, `options?`: DataProviderOptions): [*DataProvider*](dataprovider.md)
 
 #### Parameters:
 
-Name | Type | Default value |
------- | ------ | ------ |
-`secretKey` | string | - |
-`options` | [DataProviderOptions](../interfaces/dataprovideroptions.md) | {} |
+Name | Type |
+:------ | :------ |
+`secretKey` | *string* |
+`options` | DataProviderOptions |
 
-**Returns:** [DataProvider](dataprovider.md)
+**Returns:** [*DataProvider*](dataprovider.md)
+
+Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L54)
 
 ## Properties
 
 ### options
 
-•  **options**: [DataProviderOptions](../interfaces/dataprovideroptions.md)
-
-*Defined in [src/dataProvider.ts:49](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L49)*
+• **options**: DataProviderOptions
 
 Options used to make requests
+
+Defined in: [src/dataProvider.ts:49](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L49)
 
 ___
 
 ### secretKey
 
-• `Private` **secretKey**: string
-
-*Defined in [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L54)*
+• `Private` **secretKey**: *string*
 
 Provider Provisioned Secret Key
+
+Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L54)
 
 ## Methods
 
 ### createSignature
 
-▸ **createSignature**(`body`: string): string
-
-*Defined in [src/dataProvider.ts:80](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L80)*
+▸ **createSignature**(`body`: *string*): *string*
 
 Creates a HMAC SHA1 Signature
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`body` | string |
+:------ | :------ |
+`body` | *string* |
 
-**Returns:** string
+**Returns:** *string*
+
+Defined in: [src/dataProvider.ts:80](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L80)
 
 ___
 
 ### makeUrl
 
-▸ `Private`**makeUrl**(`uri`: string): string
-
-*Defined in [src/dataProvider.ts:89](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L89)*
+▸ `Private`**makeUrl**(`uri`: *string*): *string*
 
 Make URL by combining the apiUrl and the given uri
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`uri` | string |
+:------ | :------ |
+`uri` | *string* |
 
-**Returns:** string
+**Returns:** *string*
+
+Defined in: [src/dataProvider.ts:89](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L89)
 
 ___
 
 ### post
 
-▸ **post**(`uri`: string, `payload`: Record\<string, unknown>, `options?`: RequestInit): Promise\<Response>
-
-*Defined in [src/dataProvider.ts:153](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L153)*
+▸ **post**(`uri`: *string*, `payload`: *Record*<string, unknown\>, `options?`: RequestInit): *Promise*<[*Response*](response.md)\>
 
 Create a POST request
 
 #### Parameters:
 
-Name | Type | Default value |
------- | ------ | ------ |
-`uri` | string | - |
-`payload` | Record\<string, unknown> | - |
-`options` | RequestInit | {} |
+Name | Type |
+:------ | :------ |
+`uri` | *string* |
+`payload` | *Record*<string, unknown\> |
+`options` | RequestInit |
 
-**Returns:** Promise\<Response>
+**Returns:** *Promise*<[*Response*](response.md)\>
+
+Defined in: [src/dataProvider.ts:153](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L153)
 
 ___
 
 ### request
 
-▸ `Private`**request**(`uri`: string, `options`: RequestInit, `attempts?`: number): Promise\<Response>
-
-*Defined in [src/dataProvider.ts:96](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L96)*
+▸ `Private`**request**(`uri`: *string*, `options`: RequestInit, `attempts?`: *number*): *Promise*<[*Response*](response.md)\>
 
 Make a http request with node-fetch with builtin retries
 
 #### Parameters:
 
 Name | Type | Default value |
------- | ------ | ------ |
-`uri` | string | - |
+:------ | :------ | :------ |
+`uri` | *string* | - |
 `options` | RequestInit | - |
-`attempts` | number | 0 |
+`attempts` | *number* | 0 |
 
-**Returns:** Promise\<Response>
+**Returns:** *Promise*<[*Response*](response.md)\>
+
+Defined in: [src/dataProvider.ts:96](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L96)
 
 ___
 
 ### setApiUrl
 
-▸ **setApiUrl**(`url`: [DatacenterHostnames](../enums/datacenterhostnames.md) \| string): [DataProvider](dataprovider.md)
-
-*Defined in [src/dataProvider.ts:70](https://github.com/GoodwayGroup/lib-tradedesk/blob/cc0625a/src/dataProvider.ts#L70)*
+▸ **setApiUrl**(`url`: *string*): [*DataProvider*](dataprovider.md)
 
 Set the API Url to an explicit url
 
 #### Parameters:
 
 Name | Type |
------- | ------ |
-`url` | [DatacenterHostnames](../enums/datacenterhostnames.md) \| string |
+:------ | :------ |
+`url` | *string* |
 
-**Returns:** [DataProvider](dataprovider.md)
+**Returns:** [*DataProvider*](dataprovider.md)
+
+Defined in: [src/dataProvider.ts:70](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/dataProvider.ts#L70)
