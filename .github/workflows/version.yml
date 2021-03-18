@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install git-chglog
         run: |
-          sudo curl https://i.jpillora.com/git-chglog/git-chglog! | bash
+          curl https://i.jpillora.com/git-chglog/git-chglog! | sudo bash
       - name: Update docs, version and push tag
         run: |
           ./release.sh ${{ github.event.inputs.version }}
