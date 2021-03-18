@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -34,6 +36,15 @@ jobs:
         run: |
           curl https://i.jpillora.com/git-chglog/git-chglog! | sudo bash
 
-      - name: Update docs, version and push tag
+      - name: Update docs, changelog and version
         run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           ./release.sh ${{ github.event.inputs.version }}
+
+      - name: Push changes
+          uses: ad-m/github-push-action@v0.6.0
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            tags: true
+            branch: ${{ github.ref }}
