@@ -1,0 +1,17 @@
+name: version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to pass to release.sh [vX.X.X]'
+        required: true
+
+jobs:
+  version:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: |
+          ./release.sh ${{ github.event.inputs.version }}"
