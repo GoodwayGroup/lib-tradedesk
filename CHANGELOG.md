@@ -2,6 +2,24 @@
 ## [Unreleased]
 
 
+<a name="v1.2.0"></a>
+## [v1.2.0] - 2021-03-18
+### Bug Fixes
+- **github actions:** exclude all branches
+
+### Chore
+- **deps:** update actions/checkout action to v2 ([#82](https://github.com/GoodwayGroup/lib-tradedesk/issues/82))
+- **deps:** update dependency husky to v5
+- **deps:** update node.js to v14
+- **deps:** update all non-major dependencies ([#85](https://github.com/GoodwayGroup/lib-tradedesk/issues/85))
+- **deps:** update all non-major dependencies ([#84](https://github.com/GoodwayGroup/lib-tradedesk/issues/84))
+- **deps:** update actions/setup-node action to v2 ([#83](https://github.com/GoodwayGroup/lib-tradedesk/issues/83))
+- **docs:** updating docs for version v1.2.0
+
+### Features
+- **cd:** add workflow dispatch to version and publish to npm ([#86](https://github.com/GoodwayGroup/lib-tradedesk/issues/86))
+
+
 <a name="v1.1.1"></a>
 ## [v1.1.1] - 2021-03-07
 ### Bug Fixes
@@ -12,6 +30,9 @@
 - **deps:** update dependency marked to 2.0.0 [security] ([#81](https://github.com/GoodwayGroup/lib-tradedesk/issues/81))
 - **docs:** updating docs for version v1.1.1
 - **github action:** add Publish action
+
+### Features
+- **release:** v1.1.1
 
 ### Pull Requests
 - Merge pull request [#73](https://github.com/GoodwayGroup/lib-tradedesk/issues/73) from GoodwayGroup/release/v1.1.0
@@ -145,7 +166,8 @@ feat(release): v1.1.0
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...HEAD
+[v1.2.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...v1.2.0
 [v1.1.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...v1.1.0
 [v1.0.3]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...v1.0.3
