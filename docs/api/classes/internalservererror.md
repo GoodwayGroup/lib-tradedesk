@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / InternalServerError
+[@goodwaygroup/lib-tradedesk - v1.2.0](../README.md) / InternalServerError
 
 # Class: InternalServerError
 
@@ -42,7 +42,7 @@ Name | Type |
 
 **Returns:** [*InternalServerError*](internalservererror.md)
 
-Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L64)
+Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L64)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'InternalServerError'
 
-Defined in: [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L62)
+Defined in: [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L62)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L64)
+Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L64)
 
 ___
 

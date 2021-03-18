@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.1.1](../README.md) / UnauthorizedError
+[@goodwaygroup/lib-tradedesk - v1.2.0](../README.md) / UnauthorizedError
 
 # Class: UnauthorizedError
 
@@ -42,7 +42,7 @@ Name | Type |
 
 **Returns:** [*UnauthorizedError*](unauthorizederror.md)
 
-Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L53)
+Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L53)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'UnauthorizedError'
 
-Defined in: [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L51)
+Defined in: [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L51)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/0a7142d/src/errors.ts#L53)
+Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L53)
 
 ___
 
