@@ -80,4 +80,10 @@ h2 "Updating CHANGELOG.md"
 git-chglog --next-tag $VERSION -o CHANGELOG.md && git add CHANGELOG.md
 git commit -m "feat(release): $VERSION"
 
+note "Pushing branch: git push origin $(git rev-parse --abbrev-ref HEAD)"
+git push origin $(git rev-parse --abbrev-ref HEAD)
+
+note "Pushing tag: git push origin $VERSION"
+git push origin $VERSION
+
 success "Done!"
