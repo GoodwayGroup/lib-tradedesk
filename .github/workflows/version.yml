@@ -1,4 +1,4 @@
-name: version
+name: Publish
 
 on:
   workflow_dispatch:
@@ -14,7 +14,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
+          # pull all the branches and tags
           fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
+      - name: Install git-chglog
+        run: |
+          curl https://i.jpillora.com/git-chglog/git-chglog! | sudo bash
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -32,14 +46,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Install git-chglog
-        run: |
-          curl https://i.jpillora.com/git-chglog/git-chglog! | sudo bash
-
-      - name: npm version
+      - name: Setup git user
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+
+      - name: npm version
+        run: |
           npm version ${{ github.event.inputs.version }}
 
       - name: Push changes
@@ -48,3 +61,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           tags: true
           branch: ${{ github.ref }}
+
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.ORG_NPM_TOKEN}}
+
+      - name: Run GoReleaser to update Release Notes
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          args: release --rm-dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GORELEASER_CLOK_TOKEN }}
