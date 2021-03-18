@@ -14,4 +14,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - run: |
-          ./release.sh ${{ github.event.inputs.version }}"
+          ./release.sh ${{ github.event.inputs.version }}
