@@ -1,0 +1,12 @@
+# This is an example .goreleaser.yml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+project_name: "@goodwaygroup/lib-tradedesk"
+
+builds:
+  - skip: true
+
+changelog:
+  sort: desc
+  filters:
+    exclude:
+      - '^Merge'
