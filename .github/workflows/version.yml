@@ -36,11 +36,11 @@ jobs:
         run: |
           curl https://i.jpillora.com/git-chglog/git-chglog! | sudo bash
 
-      - name: Update docs, changelog and version
+      - name: npm version
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          ./release.sh ${{ github.event.inputs.version }}
+          npm version ${{ github.event.inputs.version }}
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
