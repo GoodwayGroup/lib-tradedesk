@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.2.0](../README.md) / ForbiddenError
+[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / ForbiddenError
 
 # Class: ForbiddenError
 
@@ -42,7 +42,7 @@ Name | Type |
 
 **Returns:** [*ForbiddenError*](forbiddenerror.md)
 
-Defined in: [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L31)
+Defined in: [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L31)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'ForbiddenError'
 
-Defined in: [src/errors.ts:29](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L29)
+Defined in: [src/errors.ts:29](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L29)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L31)
+Defined in: [src/errors.ts:31](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L31)
 
 ___
 

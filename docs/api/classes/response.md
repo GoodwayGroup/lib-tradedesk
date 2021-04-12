@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.2.0](../README.md) / Response
+[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / Response
 
 # Class: Response
 
@@ -55,7 +55,7 @@ Name | Type |
 
 **Returns:** [*Response*](response.md)
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:166
+Defined in: node_modules/@types/node-fetch/index.d.ts:167
 
 ## Properties
 
@@ -63,7 +63,7 @@ Defined in: node_modules/@types/node-fetch/index.d.ts:166
 
 • **body**: *ReadableStream*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:144
+Defined in: node_modules/@types/node-fetch/index.d.ts:145
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **bodyUsed**: *boolean*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:145
+Defined in: node_modules/@types/node-fetch/index.d.ts:146
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 • **headers**: *Headers*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:171
+Defined in: node_modules/@types/node-fetch/index.d.ts:172
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 • **ok**: *boolean*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:172
+Defined in: node_modules/@types/node-fetch/index.d.ts:173
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 • **redirected**: *boolean*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:173
+Defined in: node_modules/@types/node-fetch/index.d.ts:174
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 • **size**: *number*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:148
+Defined in: node_modules/@types/node-fetch/index.d.ts:149
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 • **status**: *number*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:174
+Defined in: node_modules/@types/node-fetch/index.d.ts:175
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 • **statusText**: *string*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:175
+Defined in: node_modules/@types/node-fetch/index.d.ts:176
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 • **timeout**: *number*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:151
+Defined in: node_modules/@types/node-fetch/index.d.ts:152
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 • **type**: ResponseType
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:176
+Defined in: node_modules/@types/node-fetch/index.d.ts:177
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 • **url**: *string*
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:177
+Defined in: node_modules/@types/node-fetch/index.d.ts:178
 
 ## Methods
 
@@ -153,7 +153,7 @@ Defined in: node_modules/@types/node-fetch/index.d.ts:177
 
 **Returns:** *Promise*<ArrayBuffer\>
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:142
+Defined in: node_modules/@types/node-fetch/index.d.ts:143
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 **Returns:** *Promise*<Blob\>
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:143
+Defined in: node_modules/@types/node-fetch/index.d.ts:144
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 **Returns:** *Promise*<Buffer\>
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:146
+Defined in: node_modules/@types/node-fetch/index.d.ts:147
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 **Returns:** [*Response*](response.md)
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:170
+Defined in: node_modules/@types/node-fetch/index.d.ts:171
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 **Returns:** *Promise*<any\>
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:147
+Defined in: node_modules/@types/node-fetch/index.d.ts:148
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 **Returns:** *Promise*<string\>
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:149
+Defined in: node_modules/@types/node-fetch/index.d.ts:150
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 **Returns:** *Promise*<string\>
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:150
+Defined in: node_modules/@types/node-fetch/index.d.ts:151
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 **Returns:** [*Response*](response.md)
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:168
+Defined in: node_modules/@types/node-fetch/index.d.ts:169
 
 ___
 
@@ -240,4 +240,4 @@ Name | Type |
 
 **Returns:** [*Response*](response.md)
 
-Defined in: node_modules/@types/node-fetch/index.d.ts:169
+Defined in: node_modules/@types/node-fetch/index.d.ts:170

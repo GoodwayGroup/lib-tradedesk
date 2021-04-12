@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.2.0](../README.md) / BadRequestError
+[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / BadRequestError
 
 # Class: BadRequestError
 
@@ -42,7 +42,7 @@ Name | Type |
 
 **Returns:** [*BadRequestError*](badrequesterror.md)
 
-Defined in: [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L20)
+Defined in: [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L20)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'BadRequestError'
 
-Defined in: [src/errors.ts:18](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L18)
+Defined in: [src/errors.ts:18](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L18)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/errors.ts#L20)
+Defined in: [src/errors.ts:20](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L20)
 
 ___
 

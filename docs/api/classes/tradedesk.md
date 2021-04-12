@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.2.0](../README.md) / TradeDesk
+[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / TradeDesk
 
 # Class: TradeDesk
 
@@ -41,7 +41,7 @@ Name | Type |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L69)
+Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L69)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/
 
 Options used to make requests
 
-Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L69)
+Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L69)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 The authentication token
 
-Defined in: [src/tradedesk.ts:59](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L59)
+Defined in: [src/tradedesk.ts:59](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L59)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 The time when the token was last set. This works to refresh a token before trying request with an expired token
 
-Defined in: [src/tradedesk.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L64)
+Defined in: [src/tradedesk.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L64)
 
 ## Methods
 
@@ -83,7 +83,7 @@ Does this instance have enough data to attempt a login
 
 **Returns:** *boolean*
 
-Defined in: [src/tradedesk.ts:195](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L195)
+Defined in: [src/tradedesk.ts:195](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L195)
 
 ___
 
@@ -102,7 +102,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:338](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L338)
+Defined in: [src/tradedesk.ts:338](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L338)
 
 ___
 
@@ -121,7 +121,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:287](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L287)
+Defined in: [src/tradedesk.ts:287](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L287)
 
 ___
 
@@ -133,7 +133,7 @@ Login to TradeDesk API and grab an authentication token
 
 **Returns:** *Promise*<[*TradeDesk*](tradedesk.md)\>
 
-Defined in: [src/tradedesk.ts:119](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L119)
+Defined in: [src/tradedesk.ts:119](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L119)
 
 ▸ **login**(`username`: *string*, `password`: *string*, `tokenExpiration?`: *number*): *Promise*<[*TradeDesk*](tradedesk.md)\>
 
@@ -149,7 +149,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*TradeDesk*](tradedesk.md)\>
 
-Defined in: [src/tradedesk.ts:128](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L128)
+Defined in: [src/tradedesk.ts:128](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L128)
 
 ___
 
@@ -167,7 +167,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [src/tradedesk.ts:188](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L188)
+Defined in: [src/tradedesk.ts:188](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L188)
 
 ___
 
@@ -187,7 +187,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:300](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L300)
+Defined in: [src/tradedesk.ts:300](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L300)
 
 ___
 
@@ -207,7 +207,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:319](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L319)
+Defined in: [src/tradedesk.ts:319](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L319)
 
 ___
 
@@ -228,7 +228,7 @@ Name | Type | Default value |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:202](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L202)
+Defined in: [src/tradedesk.ts:202](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L202)
 
 ___
 
@@ -246,7 +246,7 @@ Name | Type |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:97](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L97)
+Defined in: [src/tradedesk.ts:97](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L97)
 
 ▸ **setApiUrl**(`url`: *string*): [*TradeDesk*](tradedesk.md)
 
@@ -260,7 +260,7 @@ Name | Type |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:102](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L102)
+Defined in: [src/tradedesk.ts:102](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L102)
 
 ___
 
@@ -276,4 +276,4 @@ Name | Type |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:81](https://github.com/GoodwayGroup/lib-tradedesk/blob/a025333/src/tradedesk.ts#L81)
+Defined in: [src/tradedesk.ts:81](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L81)
