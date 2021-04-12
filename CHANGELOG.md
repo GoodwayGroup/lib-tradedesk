@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="v1.2.1"></a>
+## [v1.2.1] - 2021-04-12
+### Chore
+- **deps:** update all non-major dependencies ([#89](https://github.com/GoodwayGroup/lib-tradedesk/issues/89))
+- **deps:** update dependency husky to v6 ([#88](https://github.com/GoodwayGroup/lib-tradedesk/issues/88))
+- **deps:** update all non-major dependencies ([#87](https://github.com/GoodwayGroup/lib-tradedesk/issues/87))
+- **docs:** updating docs for version v1.2.1
+
+
 <a name="v1.2.0"></a>
 ## [v1.2.0] - 2021-03-18
 ### Bug Fixes
@@ -18,6 +27,7 @@
 
 ### Features
 - **cd:** add workflow dispatch to version and publish to npm ([#86](https://github.com/GoodwayGroup/lib-tradedesk/issues/86))
+- **release:** v1.2.0
 
 
 <a name="v1.1.1"></a>
@@ -166,7 +176,8 @@ feat(release): v1.1.0
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.1...HEAD
+[v1.2.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...v1.2.0
 [v1.1.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...v1.1.0
