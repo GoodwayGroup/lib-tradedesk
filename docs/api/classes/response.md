@@ -1,10 +1,10 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / Response
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / Response
 
 # Class: Response
 
 ## Hierarchy
 
-* *Body*
+- *Body*
 
   ↳ **Response**
 
@@ -46,12 +46,12 @@
 
 \+ **new Response**(`body?`: BodyInit, `init?`: ResponseInit): [*Response*](response.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`body?` | BodyInit |
-`init?` | ResponseInit |
+| Name | Type |
+| :------ | :------ |
+| `body?` | BodyInit |
+| `init?` | ResponseInit |
 
 **Returns:** [*Response*](response.md)
 
@@ -219,7 +219,7 @@ ___
 
 ### error
 
-▸ `Static`**error**(): [*Response*](response.md)
+▸ `Static` **error**(): [*Response*](response.md)
 
 **Returns:** [*Response*](response.md)
 
@@ -229,14 +229,14 @@ ___
 
 ### redirect
 
-▸ `Static`**redirect**(`url`: *string*, `status`: *number*): [*Response*](response.md)
+▸ `Static` **redirect**(`url`: *string*, `status`: *number*): [*Response*](response.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`url` | *string* |
-`status` | *number* |
+| Name | Type |
+| :------ | :------ |
+| `url` | *string* |
+| `status` | *number* |
 
 **Returns:** [*Response*](response.md)
 

@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / DataProvider
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / DataProvider
 
 # Class: DataProvider
 
@@ -27,16 +27,16 @@
 
 \+ **new DataProvider**(`secretKey`: *string*, `options?`: DataProviderOptions): [*DataProvider*](dataprovider.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`secretKey` | *string* |
-`options` | DataProviderOptions |
+| Name | Type |
+| :------ | :------ |
+| `secretKey` | *string* |
+| `options` | DataProviderOptions |
 
 **Returns:** [*DataProvider*](dataprovider.md)
 
-Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L54)
+Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L54)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradede
 
 Options used to make requests
 
-Defined in: [src/dataProvider.ts:49](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L49)
+Defined in: [src/dataProvider.ts:49](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L49)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 Provider Provisioned Secret Key
 
-Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L54)
+Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L54)
 
 ## Methods
 
@@ -66,33 +66,33 @@ Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradede
 
 Creates a HMAC SHA1 Signature
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`body` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `body` | *string* |
 
 **Returns:** *string*
 
-Defined in: [src/dataProvider.ts:80](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L80)
+Defined in: [src/dataProvider.ts:80](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L80)
 
 ___
 
 ### makeUrl
 
-▸ `Private`**makeUrl**(`uri`: *string*): *string*
+▸ `Private` **makeUrl**(`uri`: *string*): *string*
 
 Make URL by combining the apiUrl and the given uri
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
 
 **Returns:** *string*
 
-Defined in: [src/dataProvider.ts:89](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L89)
+Defined in: [src/dataProvider.ts:89](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L89)
 
 ___
 
@@ -102,37 +102,37 @@ ___
 
 Create a POST request
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
-`payload` | *Record*<string, unknown\> |
-`options` | RequestInit |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
+| `payload` | *Record*<string, unknown\> |
+| `options` | RequestInit |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/dataProvider.ts:153](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L153)
+Defined in: [src/dataProvider.ts:153](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L153)
 
 ___
 
 ### request
 
-▸ `Private`**request**(`uri`: *string*, `options`: RequestInit, `attempts?`: *number*): *Promise*<[*Response*](response.md)\>
+▸ `Private` **request**(`uri`: *string*, `options`: RequestInit, `attempts?`: *number*): *Promise*<[*Response*](response.md)\>
 
 Make a http request with node-fetch with builtin retries
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Default value |
-:------ | :------ | :------ |
-`uri` | *string* | - |
-`options` | RequestInit | - |
-`attempts` | *number* | 0 |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `uri` | *string* | - |
+| `options` | RequestInit | - |
+| `attempts` | *number* | 0 |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/dataProvider.ts:96](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L96)
+Defined in: [src/dataProvider.ts:96](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L96)
 
 ___
 
@@ -142,12 +142,12 @@ ___
 
 Set the API Url to an explicit url
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`url` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `url` | *string* |
 
 **Returns:** [*DataProvider*](dataprovider.md)
 
-Defined in: [src/dataProvider.ts:70](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/dataProvider.ts#L70)
+Defined in: [src/dataProvider.ts:70](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/dataProvider.ts#L70)

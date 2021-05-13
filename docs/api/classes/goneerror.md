@@ -1,10 +1,10 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / GoneError
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / GoneError
 
 # Class: GoneError
 
 ## Hierarchy
 
-* *Error*
+- *Error*
 
   ↳ **GoneError**
 
@@ -33,16 +33,16 @@
 
 \+ **new GoneError**(`message`: *string*, `response`: [*Response*](response.md)): [*GoneError*](goneerror.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | *string* |
-`response` | [*Response*](response.md) |
+| Name | Type |
+| :------ | :------ |
+| `message` | *string* |
+| `response` | [*Response*](response.md) |
 
 **Returns:** [*GoneError*](goneerror.md)
 
-Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L42)
+Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L42)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'GoneError'
 
-Defined in: [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L40)
+Defined in: [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L40)
 
 ___
 
@@ -70,20 +70,18 @@ Optional override for formatting stack traces
 
 **`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
 
-#### Type declaration:
+#### Type declaration
 
 ▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`err` | Error |
-`stackTraces` | CallSite[] |
+| Name | Type |
+| :------ | :------ |
+| `err` | Error |
+| `stackTraces` | CallSite[] |
 
 **Returns:** *any*
-
-Defined in: node_modules/@types/node/globals.d.ts:11
 
 Defined in: node_modules/@types/node/globals.d.ts:11
 
@@ -93,7 +91,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L42)
+Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L42)
 
 ___
 
@@ -119,12 +117,12 @@ Defined in: node_modules/@types/node/globals.d.ts:13
 
 Create .stack property on a target object
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`targetObject` | *object* |
-`constructorOpt?` | Function |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | *object* |
+| `constructorOpt?` | Function |
 
 **Returns:** *void*
 

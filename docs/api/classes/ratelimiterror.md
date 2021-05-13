@@ -1,10 +1,10 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / RateLimitError
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / RateLimitError
 
 # Class: RateLimitError
 
 ## Hierarchy
 
-* *Error*
+- *Error*
 
   ↳ **RateLimitError**
 
@@ -34,17 +34,17 @@
 
 \+ **new RateLimitError**(`message`: *string*, `attempts`: *number*, `response`: [*Response*](response.md)): [*RateLimitError*](ratelimiterror.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | *string* |
-`attempts` | *number* |
-`response` | [*Response*](response.md) |
+| Name | Type |
+| :------ | :------ |
+| `message` | *string* |
+| `attempts` | *number* |
+| `response` | [*Response*](response.md) |
 
 **Returns:** [*RateLimitError*](ratelimiterror.md)
 
-Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L8)
+Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L8)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob
 
 • **attempts**: *number*
 
-Defined in: [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L6)
+Defined in: [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L6)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **name**: *string*= 'RateLimitError'
 
-Defined in: [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L4)
+Defined in: [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L4)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L8)
+Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L8)
 
 ___
 
@@ -96,20 +96,18 @@ Optional override for formatting stack traces
 
 **`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
 
-#### Type declaration:
+#### Type declaration
 
 ▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`err` | Error |
-`stackTraces` | CallSite[] |
+| Name | Type |
+| :------ | :------ |
+| `err` | Error |
+| `stackTraces` | CallSite[] |
 
 **Returns:** *any*
-
-Defined in: node_modules/@types/node/globals.d.ts:11
 
 Defined in: node_modules/@types/node/globals.d.ts:11
 
@@ -125,16 +123,16 @@ Defined in: node_modules/@types/node/globals.d.ts:13
 
 ### captureStackTrace
 
-▸ `Static`**captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+▸ `Static` **captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
 
 Create .stack property on a target object
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`targetObject` | *object* |
-`constructorOpt?` | Function |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | *object* |
+| `constructorOpt?` | Function |
 
 **Returns:** *void*
 

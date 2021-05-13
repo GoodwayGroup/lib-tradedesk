@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / TradeDesk
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / TradeDesk
 
 # Class: TradeDesk
 
@@ -33,15 +33,15 @@
 
 \+ **new TradeDesk**(`options?`: TradeDeskOptions): [*TradeDesk*](tradedesk.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`options` | TradeDeskOptions |
+| Name | Type |
+| :------ | :------ |
+| `options` | TradeDeskOptions |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L69)
+Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L69)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/
 
 Options used to make requests
 
-Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L69)
+Defined in: [src/tradedesk.ts:69](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L69)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 The authentication token
 
-Defined in: [src/tradedesk.ts:59](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L59)
+Defined in: [src/tradedesk.ts:59](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L59)
 
 ___
 
@@ -71,19 +71,19 @@ ___
 
 The time when the token was last set. This works to refresh a token before trying request with an expired token
 
-Defined in: [src/tradedesk.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L64)
+Defined in: [src/tradedesk.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L64)
 
 ## Methods
 
 ### canLogin
 
-▸ `Private`**canLogin**(): *boolean*
+▸ `Private` **canLogin**(): *boolean*
 
 Does this instance have enough data to attempt a login
 
 **Returns:** *boolean*
 
-Defined in: [src/tradedesk.ts:195](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L195)
+Defined in: [src/tradedesk.ts:195](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L195)
 
 ___
 
@@ -93,16 +93,16 @@ ___
 
 Create a DELETE request
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
-`options` | RequestInit |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
+| `options` | RequestInit |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:338](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L338)
+Defined in: [src/tradedesk.ts:338](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L338)
 
 ___
 
@@ -112,16 +112,16 @@ ___
 
 Create a GET request
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
-`options` | RequestInit |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
+| `options` | RequestInit |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:287](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L287)
+Defined in: [src/tradedesk.ts:287](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L287)
 
 ___
 
@@ -133,41 +133,41 @@ Login to TradeDesk API and grab an authentication token
 
 **Returns:** *Promise*<[*TradeDesk*](tradedesk.md)\>
 
-Defined in: [src/tradedesk.ts:119](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L119)
+Defined in: [src/tradedesk.ts:119](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L119)
 
 ▸ **login**(`username`: *string*, `password`: *string*, `tokenExpiration?`: *number*): *Promise*<[*TradeDesk*](tradedesk.md)\>
 
 Login to TradeDesk API and grab an authentication token
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`username` | *string* | The login of the user requesting the authentication token.   |
-`password` | *string* | The login of the user requesting the authentication token.   |
-`tokenExpiration?` | *number* | The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `username` | *string* | The login of the user requesting the authentication token. |
+| `password` | *string* | The login of the user requesting the authentication token. |
+| `tokenExpiration?` | *number* | The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire |
 
 **Returns:** *Promise*<[*TradeDesk*](tradedesk.md)\>
 
-Defined in: [src/tradedesk.ts:128](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L128)
+Defined in: [src/tradedesk.ts:128](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L128)
 
 ___
 
 ### makeUrl
 
-▸ `Private`**makeUrl**(`uri`: *string*): *string*
+▸ `Private` **makeUrl**(`uri`: *string*): *string*
 
 Make URL by combining the apiUrl and the given uri
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
 
 **Returns:** *string*
 
-Defined in: [src/tradedesk.ts:188](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L188)
+Defined in: [src/tradedesk.ts:188](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L188)
 
 ___
 
@@ -177,17 +177,17 @@ ___
 
 Create a POST request
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
-`payload` | *Record*<string, unknown\> |
-`options` | RequestInit |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
+| `payload` | *Record*<string, unknown\> |
+| `options` | RequestInit |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:300](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L300)
+Defined in: [src/tradedesk.ts:300](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L300)
 
 ___
 
@@ -197,38 +197,38 @@ ___
 
 Create a PUT request
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`uri` | *string* |
-`payload` | *Record*<string, unknown\> |
-`options` | RequestInit |
+| Name | Type |
+| :------ | :------ |
+| `uri` | *string* |
+| `payload` | *Record*<string, unknown\> |
+| `options` | RequestInit |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:319](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L319)
+Defined in: [src/tradedesk.ts:319](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L319)
 
 ___
 
 ### request
 
-▸ `Private`**request**(`uri`: *string*, `options`: RequestInit, `attempts?`: *number*, `tryLogin?`: *boolean*): *Promise*<[*Response*](response.md)\>
+▸ `Private` **request**(`uri`: *string*, `options`: RequestInit, `attempts?`: *number*, `tryLogin?`: *boolean*): *Promise*<[*Response*](response.md)\>
 
 Make a http request with node-fetch with builtin retries and automatic login
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Default value |
-:------ | :------ | :------ |
-`uri` | *string* | - |
-`options` | RequestInit | - |
-`attempts` | *number* | 0 |
-`tryLogin` | *boolean* | true |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `uri` | *string* | - |
+| `options` | RequestInit | - |
+| `attempts` | *number* | 0 |
+| `tryLogin` | *boolean* | true |
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/tradedesk.ts:202](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L202)
+Defined in: [src/tradedesk.ts:202](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L202)
 
 ___
 
@@ -238,29 +238,29 @@ ___
 
 Set the API url based on an enumerated list
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`environment` | [*ApiUrlEnvironments*](../enums/apiurlenvironments.md) |
+| Name | Type |
+| :------ | :------ |
+| `environment` | [*ApiUrlEnvironments*](../enums/apiurlenvironments.md) |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:97](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L97)
+Defined in: [src/tradedesk.ts:97](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L97)
 
 ▸ **setApiUrl**(`url`: *string*): [*TradeDesk*](tradedesk.md)
 
 Set the API Url to an explicit url
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`url` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `url` | *string* |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:102](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L102)
+Defined in: [src/tradedesk.ts:102](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L102)
 
 ___
 
@@ -268,12 +268,12 @@ ___
 
 ▸ **setToken**(`token`: *string*): [*TradeDesk*](tradedesk.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`token` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `token` | *string* |
 
 **Returns:** [*TradeDesk*](tradedesk.md)
 
-Defined in: [src/tradedesk.ts:81](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/tradedesk.ts#L81)
+Defined in: [src/tradedesk.ts:81](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/tradedesk.ts#L81)

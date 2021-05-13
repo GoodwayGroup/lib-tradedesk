@@ -1,10 +1,10 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / UnauthorizedError
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / UnauthorizedError
 
 # Class: UnauthorizedError
 
 ## Hierarchy
 
-* *Error*
+- *Error*
 
   ↳ **UnauthorizedError**
 
@@ -33,16 +33,16 @@
 
 \+ **new UnauthorizedError**(`message`: *string*, `response`: [*Response*](response.md)): [*UnauthorizedError*](unauthorizederror.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | *string* |
-`response` | [*Response*](response.md) |
+| Name | Type |
+| :------ | :------ |
+| `message` | *string* |
+| `response` | [*Response*](response.md) |
 
 **Returns:** [*UnauthorizedError*](unauthorizederror.md)
 
-Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L53)
+Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L53)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'UnauthorizedError'
 
-Defined in: [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L51)
+Defined in: [src/errors.ts:51](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L51)
 
 ___
 
@@ -70,20 +70,18 @@ Optional override for formatting stack traces
 
 **`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
 
-#### Type declaration:
+#### Type declaration
 
 ▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`err` | Error |
-`stackTraces` | CallSite[] |
+| Name | Type |
+| :------ | :------ |
+| `err` | Error |
+| `stackTraces` | CallSite[] |
 
 **Returns:** *any*
-
-Defined in: node_modules/@types/node/globals.d.ts:11
 
 Defined in: node_modules/@types/node/globals.d.ts:11
 
@@ -93,7 +91,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L53)
+Defined in: [src/errors.ts:53](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L53)
 
 ___
 
@@ -119,12 +117,12 @@ Defined in: node_modules/@types/node/globals.d.ts:13
 
 Create .stack property on a target object
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`targetObject` | *object* |
-`constructorOpt?` | Function |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | *object* |
+| `constructorOpt?` | Function |
 
 **Returns:** *void*
 

@@ -1,10 +1,10 @@
-[@goodwaygroup/lib-tradedesk - v1.2.1](../README.md) / InternalServerError
+[@goodwaygroup/lib-tradedesk - v1.2.2](../README.md) / InternalServerError
 
 # Class: InternalServerError
 
 ## Hierarchy
 
-* *Error*
+- *Error*
 
   ↳ **InternalServerError**
 
@@ -33,16 +33,16 @@
 
 \+ **new InternalServerError**(`message`: *string*, `response`: [*Response*](response.md)): [*InternalServerError*](internalservererror.md)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | *string* |
-`response` | [*Response*](response.md) |
+| Name | Type |
+| :------ | :------ |
+| `message` | *string* |
+| `response` | [*Response*](response.md) |
 
 **Returns:** [*InternalServerError*](internalservererror.md)
 
-Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L64)
+Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L64)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'InternalServerError'
 
-Defined in: [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L62)
+Defined in: [src/errors.ts:62](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L62)
 
 ___
 
@@ -70,20 +70,18 @@ Optional override for formatting stack traces
 
 **`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
 
-#### Type declaration:
+#### Type declaration
 
 ▸ (`err`: Error, `stackTraces`: CallSite[]): *any*
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`err` | Error |
-`stackTraces` | CallSite[] |
+| Name | Type |
+| :------ | :------ |
+| `err` | Error |
+| `stackTraces` | CallSite[] |
 
 **Returns:** *any*
-
-Defined in: node_modules/@types/node/globals.d.ts:11
 
 Defined in: node_modules/@types/node/globals.d.ts:11
 
@@ -93,7 +91,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/00b7558/src/errors.ts#L64)
+Defined in: [src/errors.ts:64](https://github.com/GoodwayGroup/lib-tradedesk/blob/5e552af/src/errors.ts#L64)
 
 ___
 
@@ -119,12 +117,12 @@ Defined in: node_modules/@types/node/globals.d.ts:13
 
 Create .stack property on a target object
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`targetObject` | *object* |
-`constructorOpt?` | Function |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | *object* |
+| `constructorOpt?` | Function |
 
 **Returns:** *void*
 
