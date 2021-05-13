@@ -2,6 +2,17 @@
 ## [Unreleased]
 
 
+<a name="v1.2.2"></a>
+## [v1.2.2] - 2021-05-13
+### Chore
+- **deps:** update all non-major dependencies ([#91](https://github.com/GoodwayGroup/lib-tradedesk/issues/91))
+- **deps:** update dependency handlebars to 4.7.7 [security] ([#93](https://github.com/GoodwayGroup/lib-tradedesk/issues/93))
+- **deps:** update dependency hosted-git-info to 2.8.9 [security] ([#94](https://github.com/GoodwayGroup/lib-tradedesk/issues/94))
+- **deps:** update dependency lodash to 4.17.21 [security] ([#95](https://github.com/GoodwayGroup/lib-tradedesk/issues/95))
+- **deps:** update all non-major dependencies ([#90](https://github.com/GoodwayGroup/lib-tradedesk/issues/90))
+- **docs:** updating docs for version v1.2.2
+
+
 <a name="v1.2.1"></a>
 ## [v1.2.1] - 2021-04-12
 ### Chore
@@ -9,6 +20,9 @@
 - **deps:** update dependency husky to v6 ([#88](https://github.com/GoodwayGroup/lib-tradedesk/issues/88))
 - **deps:** update all non-major dependencies ([#87](https://github.com/GoodwayGroup/lib-tradedesk/issues/87))
 - **docs:** updating docs for version v1.2.1
+
+### Features
+- **release:** v1.2.1
 
 
 <a name="v1.2.0"></a>
@@ -176,7 +190,8 @@ feat(release): v1.1.0
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.2...HEAD
+[v1.2.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...v1.2.0
 [v1.1.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...v1.1.1
