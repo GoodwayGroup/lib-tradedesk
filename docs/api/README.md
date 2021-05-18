@@ -1,6 +1,6 @@
-@goodwaygroup/lib-tradedesk - v1.2.2
+@goodwaygroup/lib-tradedesk - v1.3.0
 
-# @goodwaygroup/lib-tradedesk - v1.2.2
+# @goodwaygroup/lib-tradedesk - v1.3.0
 
 ## Table of contents
 
