@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.3.0](../README.md) / DatacenterHostnames
+[@goodwaygroup/lib-tradedesk - v1.3.1](../README.md) / DatacenterHostnames
 
 # Enumeration: DatacenterHostnames
 
@@ -19,7 +19,7 @@
 
 • **APAC**: = "https://sin-data.adsrvr.org"
 
-Defined in: [src/dataProvider.ts:11](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L11)
+Defined in: [src/dataProvider.ts:11](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L11)
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **China**: = "https://data-cn2.adsrvr.cn"
 
-Defined in: [src/dataProvider.ts:14](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L14)
+Defined in: [src/dataProvider.ts:14](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L14)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **Tokyo**: = "https://tok-data.adsrvr.org"
 
-Defined in: [src/dataProvider.ts:13](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L13)
+Defined in: [src/dataProvider.ts:13](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L13)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **UKEU**: = "https://euw-data.adsrvr.org"
 
-Defined in: [src/dataProvider.ts:10](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L10)
+Defined in: [src/dataProvider.ts:10](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L10)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **USEastCoast**: = "https://use-data.adsrvr.org"
 
-Defined in: [src/dataProvider.ts:9](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L9)
+Defined in: [src/dataProvider.ts:9](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L9)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 • **USWestCoast**: = "https://usw-data.adsrvr.org"
 
-Defined in: [src/dataProvider.ts:12](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L12)
+Defined in: [src/dataProvider.ts:12](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L12)

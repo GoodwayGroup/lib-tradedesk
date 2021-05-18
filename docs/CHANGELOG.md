@@ -2,6 +2,85 @@
 ## [Unreleased]
 
 
+<a name="v1.3.0"></a>
+## [v1.3.0] - 2021-05-18
+### Bug Fixes
+- **release:** added required build steps to create distribution
+
+### Chore
+- **docs:** updating docs for version v1.3.0
+
+
+<a name="v1.2.2"></a>
+## [v1.2.2] - 2021-05-13
+### Chore
+- **deps:** update all non-major dependencies ([#91](https://github.com/GoodwayGroup/lib-tradedesk/issues/91))
+- **deps:** update dependency handlebars to 4.7.7 [security] ([#93](https://github.com/GoodwayGroup/lib-tradedesk/issues/93))
+- **deps:** update dependency hosted-git-info to 2.8.9 [security] ([#94](https://github.com/GoodwayGroup/lib-tradedesk/issues/94))
+- **deps:** update dependency lodash to 4.17.21 [security] ([#95](https://github.com/GoodwayGroup/lib-tradedesk/issues/95))
+- **deps:** update all non-major dependencies ([#90](https://github.com/GoodwayGroup/lib-tradedesk/issues/90))
+- **docs:** updating docs for version v1.2.2
+
+### Features
+- **release:** v1.2.2
+
+
+<a name="v1.2.1"></a>
+## [v1.2.1] - 2021-04-12
+### Chore
+- **deps:** update all non-major dependencies ([#89](https://github.com/GoodwayGroup/lib-tradedesk/issues/89))
+- **deps:** update dependency husky to v6 ([#88](https://github.com/GoodwayGroup/lib-tradedesk/issues/88))
+- **deps:** update all non-major dependencies ([#87](https://github.com/GoodwayGroup/lib-tradedesk/issues/87))
+- **docs:** updating docs for version v1.2.1
+
+### Features
+- **release:** v1.2.1
+
+
+<a name="v1.2.0"></a>
+## [v1.2.0] - 2021-03-18
+### Bug Fixes
+- **github actions:** exclude all branches
+
+### Chore
+- **deps:** update actions/checkout action to v2 ([#82](https://github.com/GoodwayGroup/lib-tradedesk/issues/82))
+- **deps:** update dependency husky to v5
+- **deps:** update node.js to v14
+- **deps:** update all non-major dependencies ([#85](https://github.com/GoodwayGroup/lib-tradedesk/issues/85))
+- **deps:** update all non-major dependencies ([#84](https://github.com/GoodwayGroup/lib-tradedesk/issues/84))
+- **deps:** update actions/setup-node action to v2 ([#83](https://github.com/GoodwayGroup/lib-tradedesk/issues/83))
+- **docs:** updating docs for version v1.2.0
+
+### Features
+- **cd:** add workflow dispatch to version and publish to npm ([#86](https://github.com/GoodwayGroup/lib-tradedesk/issues/86))
+- **release:** v1.2.0
+
+
+<a name="v1.1.1"></a>
+## [v1.1.1] - 2021-03-07
+### Bug Fixes
+- **typedoc:** update typdoc config for compatibility with new version
+
+### Chore
+- **deps:** update all non-major dependencies ([#80](https://github.com/GoodwayGroup/lib-tradedesk/issues/80))
+- **deps:** update dependency marked to 2.0.0 [security] ([#81](https://github.com/GoodwayGroup/lib-tradedesk/issues/81))
+- **docs:** updating docs for version v1.1.1
+- **github action:** add Publish action
+
+### Features
+- **release:** v1.1.1
+
+### Pull Requests
+- Merge pull request [#73](https://github.com/GoodwayGroup/lib-tradedesk/issues/73) from GoodwayGroup/release/v1.1.0
+
+
+###### Squashed Commits:
+```
+feat(release): v1.1.0
+```
+
+
+
 <a name="v1.1.0"></a>
 ## [v1.1.0] - 2021-01-22
 ### Chore
@@ -15,6 +94,7 @@
 
 ### Features
 - **DataProvider:** added class to support the data api ttdsignature header ([#65](https://github.com/GoodwayGroup/lib-tradedesk/issues/65))
+- **release:** v1.1.0
 
 
 <a name="v1.0.3"></a>
@@ -122,7 +202,12 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.3.0...HEAD
+[v1.3.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.2...v1.3.0
+[v1.2.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.1...v1.2.2
+[v1.2.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...v1.2.1
+[v1.2.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...v1.2.0
+[v1.1.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.3...v1.1.0
 [v1.0.3]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.0.1...v1.0.2

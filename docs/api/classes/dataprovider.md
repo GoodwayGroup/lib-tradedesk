@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.3.0](../README.md) / DataProvider
+[@goodwaygroup/lib-tradedesk - v1.3.1](../README.md) / DataProvider
 
 # Class: DataProvider
 
@@ -36,7 +36,7 @@
 
 **Returns:** [*DataProvider*](dataprovider.md)
 
-Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L54)
+Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L54)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradede
 
 Options used to make requests
 
-Defined in: [src/dataProvider.ts:49](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L49)
+Defined in: [src/dataProvider.ts:49](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L49)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 Provider Provisioned Secret Key
 
-Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L54)
+Defined in: [src/dataProvider.ts:54](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L54)
 
 ## Methods
 
@@ -74,7 +74,7 @@ Creates a HMAC SHA1 Signature
 
 **Returns:** *string*
 
-Defined in: [src/dataProvider.ts:80](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L80)
+Defined in: [src/dataProvider.ts:80](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L80)
 
 ___
 
@@ -92,7 +92,7 @@ Make URL by combining the apiUrl and the given uri
 
 **Returns:** *string*
 
-Defined in: [src/dataProvider.ts:89](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L89)
+Defined in: [src/dataProvider.ts:89](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L89)
 
 ___
 
@@ -112,7 +112,7 @@ Create a POST request
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/dataProvider.ts:153](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L153)
+Defined in: [src/dataProvider.ts:153](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L153)
 
 ___
 
@@ -132,7 +132,7 @@ Make a http request with node-fetch with builtin retries
 
 **Returns:** *Promise*<[*Response*](response.md)\>
 
-Defined in: [src/dataProvider.ts:96](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L96)
+Defined in: [src/dataProvider.ts:96](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L96)
 
 ___
 
@@ -150,4 +150,4 @@ Set the API Url to an explicit url
 
 **Returns:** [*DataProvider*](dataprovider.md)
 
-Defined in: [src/dataProvider.ts:70](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/dataProvider.ts#L70)
+Defined in: [src/dataProvider.ts:70](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/dataProvider.ts#L70)

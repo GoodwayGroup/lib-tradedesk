@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.3.0](../README.md) / Response
+[@goodwaygroup/lib-tradedesk - v1.3.1](../README.md) / Response
 
 # Class: Response
 

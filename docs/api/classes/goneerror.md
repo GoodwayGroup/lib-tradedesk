@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.3.0](../README.md) / GoneError
+[@goodwaygroup/lib-tradedesk - v1.3.1](../README.md) / GoneError
 
 # Class: GoneError
 
@@ -42,7 +42,7 @@
 
 **Returns:** [*GoneError*](goneerror.md)
 
-Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L42)
+Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L42)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*= 'GoneError'
 
-Defined in: [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L40)
+Defined in: [src/errors.ts:40](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L40)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L42)
+Defined in: [src/errors.ts:42](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L42)
 
 ___
 

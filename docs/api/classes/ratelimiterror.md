@@ -1,4 +1,4 @@
-[@goodwaygroup/lib-tradedesk - v1.3.0](../README.md) / RateLimitError
+[@goodwaygroup/lib-tradedesk - v1.3.1](../README.md) / RateLimitError
 
 # Class: RateLimitError
 
@@ -44,7 +44,7 @@
 
 **Returns:** [*RateLimitError*](ratelimiterror.md)
 
-Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L8)
+Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L8)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob
 
 • **attempts**: *number*
 
-Defined in: [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L6)
+Defined in: [src/errors.ts:6](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L6)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **name**: *string*= 'RateLimitError'
 
-Defined in: [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L4)
+Defined in: [src/errors.ts:4](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L4)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 • **response**: [*Response*](response.md)
 
-Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/4f7584e/src/errors.ts#L8)
+Defined in: [src/errors.ts:8](https://github.com/GoodwayGroup/lib-tradedesk/blob/a31ee87/src/errors.ts#L8)
 
 ___
 
