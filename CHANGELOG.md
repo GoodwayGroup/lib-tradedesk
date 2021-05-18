@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="v1.3.0"></a>
+## [v1.3.0] - 2021-05-18
+### Bug Fixes
+- **release:** added required build steps to create distribution
+
+### Chore
+- **docs:** updating docs for version v1.3.0
+
+
 <a name="v1.2.2"></a>
 ## [v1.2.2] - 2021-05-13
 ### Chore
@@ -11,6 +20,9 @@
 - **deps:** update dependency lodash to 4.17.21 [security] ([#95](https://github.com/GoodwayGroup/lib-tradedesk/issues/95))
 - **deps:** update all non-major dependencies ([#90](https://github.com/GoodwayGroup/lib-tradedesk/issues/90))
 - **docs:** updating docs for version v1.2.2
+
+### Features
+- **release:** v1.2.2
 
 
 <a name="v1.2.1"></a>
@@ -190,7 +202,8 @@ feat(release): v1.1.0
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.2...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.3.0...HEAD
+[v1.3.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.2...v1.3.0
 [v1.2.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.1.1...v1.2.0
