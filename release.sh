@@ -66,6 +66,9 @@ fi
 
 h1 "Preparing release of $VERSION"
 
+h2 "Updating distribution"
+npm run build
+
 h2 "Updating docs"
 npm run build:docs
 if [[ "$(git status -s docs/** 2>/dev/null | wc -l)" == "0" ]]; then
@@ -78,6 +81,6 @@ fi
 
 h2 "Updating CHANGELOG.md"
 git-chglog --next-tag $VERSION -o CHANGELOG.md && git add CHANGELOG.md
-git commit -m "feat(release): $VERSION"
+git commit -m "chore(release): updating CHANGELOG for $VERSION"
 
 success "Done!"
