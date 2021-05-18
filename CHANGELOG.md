@@ -2,6 +2,13 @@
 ## [Unreleased]
 
 
+<a name="v1.3.1"></a>
+## [v1.3.1] - 2021-05-18
+### Chore
+- **docs:** updating docs for version v1.3.1
+- **docs:** update cp command to be portable across OS
+
+
 <a name="v1.3.0"></a>
 ## [v1.3.0] - 2021-05-18
 ### Bug Fixes
@@ -9,6 +16,8 @@
 
 ### Chore
 - **docs:** updating docs for version v1.3.0
+- **release:** v1.3.0
+- **release:** updating CHANGELOG for v1.3.0
 
 
 <a name="v1.2.2"></a>
@@ -202,7 +211,8 @@ feat(release): v1.1.0
 - initial commit
 
 
-[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.3.1...HEAD
+[v1.3.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.3.0...v1.3.1
 [v1.3.0]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.2...v1.3.0
 [v1.2.2]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/GoodwayGroup/lib-tradedesk/compare/v1.2.0...v1.2.1
