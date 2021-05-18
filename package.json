@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "changelog": "git-chglog -o CHANGELOG.md --next-tag v$(grep '\\\"version\\\":' package.json | grep -v git-chglog | awk -F '\\\"' '{print $4}')",
-    "build:docs": "typedoc && cp {CONTRIBUTING.md,LICENSE,CHANGELOG.md,README.md} docs/",
+    "build:docs": "typedoc && cp CHANGELOG.md docs/ && cp CONTRIBUTING.md docs/ && cp README.md docs/ && cp LICENSE docs/",
     "version": "./release.sh"
   },
   "repository": {
