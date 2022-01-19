@@ -84,11 +84,11 @@ class TradeDesk {
     setToken(token: string): TradeDesk {
         this.token = token;
 
-        const MILISECONDS_IN_MIN = 60 * 1000;
+        const MILLISECONDS_IN_MIN = 60 * 1000;
 
-        let expiration = MAX_24H_TOKEN_EXP_IN_MIN * MILISECONDS_IN_MIN; // 24 hours
+        let expiration = MAX_24H_TOKEN_EXP_IN_MIN * MILLISECONDS_IN_MIN; // 24 hours
         if (this.options.tokenExpiration) {
-            expiration = this.options.tokenExpiration * MILISECONDS_IN_MIN;
+            expiration = this.options.tokenExpiration * MILLISECONDS_IN_MIN;
         }
 
         this.tokenTime = Date.now() + expiration;
@@ -162,7 +162,7 @@ class TradeDesk {
         };
 
         if (tokenExpiration) {
-            this.options.tokenExpiration = tokenExpiration > 1440 ? 1440 : tokenExpiration;
+            this.options.tokenExpiration = tokenExpiration > MAX_24H_TOKEN_EXP_IN_MIN ? MAX_24H_TOKEN_EXP_IN_MIN : tokenExpiration;
         }
 
         if (this.options.tokenExpiration) {
