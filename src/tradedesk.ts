@@ -10,6 +10,8 @@ export enum ApiUrlEnvironments {
     sandbox = 'sandbox'
 }
 
+export const MAX_24H_TOKEN_EXP_IN_MIN = 1440;  // 24 hours
+
 interface TradeDeskOptions {
     /**
      * The url of the Tradedesk API
@@ -32,7 +34,7 @@ interface TradeDeskOptions {
     password?: string;
 
     /**
-     * The number of minutes until the token expires. If this parameter is not set or set to zero, the token will not expire
+     * The number of minutes until the token expires. If this parameter is not set a 24 hour token (maximum) will be created.
      */
     tokenExpiration?: number;
 
@@ -75,15 +77,18 @@ class TradeDesk {
             maxRetryDelay: 60,
             retryDelay: 5,
             ...options,
+            tokenExpiration: options.tokenExpiration > MAX_24H_TOKEN_EXP_IN_MIN ? MAX_24H_TOKEN_EXP_IN_MIN : options.tokenExpiration
         };
     }
 
     setToken(token: string): TradeDesk {
         this.token = token;
 
-        let expiration = 86.4e6 * 365; // one year
+        const MILISECONDS_IN_MIN = 60 * 1000;
+
+        let expiration = MAX_24H_TOKEN_EXP_IN_MIN * MILISECONDS_IN_MIN; // 24 hours
         if (this.options.tokenExpiration) {
-            expiration = this.options.tokenExpiration * 60 * 1000;
+            expiration = this.options.tokenExpiration * MILISECONDS_IN_MIN;
         }
 
         this.tokenTime = Date.now() + expiration;
@@ -157,7 +162,7 @@ class TradeDesk {
         };
 
         if (tokenExpiration) {
-            this.options.tokenExpiration = tokenExpiration;
+            this.options.tokenExpiration = tokenExpiration > 1440 ? 1440 : tokenExpiration;
         }
 
         if (this.options.tokenExpiration) {
