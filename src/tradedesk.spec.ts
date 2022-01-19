@@ -48,6 +48,21 @@ describe('TradeDesk Class', () => {
         );
     });
 
+    it('should set a maximum 24 hour token when expiration is zero', () => {
+        const instance = new TradeDesk({
+            tokenExpiration: 0
+        });
+
+        const returnedInstance = instance.setToken('atoken');
+
+        expect(returnedInstance).toBe(instance);
+        expect(instance.token).toEqual('atoken');
+        expect(instance.tokenTime / 1000).toBeCloseTo(
+            (Date.now() + (MAX_24H_TOKEN_EXP_IN_MIN * 60 * 1000)) / 1000,
+            1
+        );
+    });
+
     it('should set a 24 hour token when no given expiration', () => {
         const instance = new TradeDesk();
 
@@ -129,6 +144,29 @@ describe('TradeDesk Class', () => {
         expect(loginScope.isDone()).toBe(true);
         expect(result).toBe(instance);
         expect(instance.token).toEqual('atoken');
+    });
+
+    it('should login with max 24 hour token when timeout is zero', async () => {
+        const loginScope = nock('https://api.thetradedesk.com/v3')
+            .post('/authentication', {
+                Login: 'auser',
+                Password: 'apassword'
+            })
+            .reply(200, {
+                Token: 'atoken'
+            });
+
+        const instance = new TradeDesk();
+
+        const result = await instance.login('auser', 'apassword', 0);
+
+        expect(loginScope.isDone()).toBe(true);
+        expect(result).toBe(instance);
+        expect(instance.token).toEqual('atoken');
+        expect(instance.tokenTime / 1000).toBeCloseTo(
+            (Date.now() + (MAX_24H_TOKEN_EXP_IN_MIN * 60 * 1000)) / 1000,
+            1
+        );
     });
 
     it('should login with specified auth token experation', async () => {
