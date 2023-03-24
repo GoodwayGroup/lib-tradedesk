@@ -32,7 +32,7 @@ jobs:
           curl https://i.jpillora.com/git-chglog/git-chglog! | sudo bash
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
         with:
