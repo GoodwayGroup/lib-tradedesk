@@ -5,8 +5,7 @@ orbs:
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    -
-      image: circleci/node:14
+    - image: cimg/node:14.21
 
 jobs:
   test:
@@ -15,18 +14,15 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      -
-        restore_cache:
+      - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
 
-      -
-        run:
+      - run:
           name: Dependency Install
           command: npm install
 
-      -
-        save_cache:
+      - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
@@ -34,22 +30,15 @@ jobs:
       # Run Tests!
       - run: npm test
 
-      # Upload to CodeCov
-      # - run:
-      #     name: 'Upload to codecov.io'
-      #     command: bash <(curl -s https://codecov.io/bash) -t <>
-
       - coveralls/upload
 
       - store_artifacts:
           path: ./coverage
 
 workflows:
-  version: 2
   build_workflow:
     jobs:
-      -
-        test:
+      - test:
           filters:
             tags:
               only: /.*/
