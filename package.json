@@ -8,13 +8,14 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverageReporters=\"lcov\" --coverage",
     "test:results": "open ./coverage/lcov-report/index.html",
-    "prepare": "husky install",
+    "prepare": "if [ -d \".git\" ] && [ -x \"$(command -v husky)\" ]; then husky install; fi;",
     "build": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "changelog": "git-chglog -o CHANGELOG.md --next-tag v$(grep '\\\"version\\\":' package.json | grep -v git-chglog | awk -F '\\\"' '{print $4}')",
     "build:docs": "typedoc && cp CHANGELOG.md docs/ && cp CONTRIBUTING.md docs/ && cp README.md docs/ && cp LICENSE docs/",
-    "version": "./release.sh"
+    "version": "./release.sh",
+    "commit": "npx git-cz"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,11 @@
     "ts-jest": "29.1.0",
     "typedoc": "0.24.1",
     "typedoc-plugin-markdown": "3.15.1",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "@commitlint/cli": "17.6.0",
+    "@commitlint/config-conventional": "17.6.0",
+    "@digitalroute/cz-conventional-changelog-for-jira": "8.0.0",
+    "commitizen": "4.3.0"
   },
   "engines": {
     "node": ">=14.21.0"
@@ -90,5 +95,13 @@
   },
   "dependencies": {
     "node-fetch": "2.6.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira",
+      "jiraPrefix": "JIRA",
+      "jiraOptional": true,
+      "skipScope": false
+    }
   }
 }
