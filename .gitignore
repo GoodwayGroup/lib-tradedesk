@@ -63,4 +63,6 @@ dist/
 
 .vscode/
 
+.DS_Store
+
 test.js
