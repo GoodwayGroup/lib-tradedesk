@@ -94,7 +94,7 @@
     ]
   },
   "dependencies": {
-    "node-fetch": "2.6.9"
+    "node-fetch": "3.3.2"
   },
   "config": {
     "commitizen": {
