@@ -17,7 +17,7 @@ jobs:
           # pull all the branches and tags
           fetch-depth: 0
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
